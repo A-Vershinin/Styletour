@@ -2,17 +2,17 @@
   "name": "Styletour",
   "version": "1.0.0",
   "private": false,
-  "description": "first project gulp",
+  "description": "Личный проект Styletour",
   "author": "Anatoliy Vershinin",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git://github.com/A-Vershinin/Styletour.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/A-Vershinin/Styletour/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/A-Vershinin/Styletour",
   "devDependencies": {
     "autoprefixer": "6.3.6",
     "browser-sync": "2.12.10",

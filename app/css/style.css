@@ -1,26 +1,50 @@
 @charset "UTF-8";
 /* подключаем все кусочки кодов в главный файл*/
 /* Переменные и миксины*/
-/* Гломадбные стили для всего проекта*/
+/* переменные цветом и типографики*/
+/* Глобальные стили для всего проекта*/
+/* Шрифты */
+/* font-family: "OpenSansBold"; */
+@font-face {
+  font-family: "OpenSansBold";
+  src: url("../../fonts/OpenSansBold/opensans-bold-webfont.woff") format("woff"), url("../../fonts/OpenSansBold/opensans-bold-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+/* font-family: "OpenSansRegular"; */
+@font-face {
+  font-family: "OpenSansRegular";
+  src: url("../../fonts/OpenSansRegular/opensans-regular-webfont.woff") format("woff"), url("../../fonts/OpenSansRegular/opensans-regular-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+/* font-family: "OpenSansLight"; */
+@font-face {
+  font-family: "OpenSansLight";
+  src: url("../../fonts/OpenSansLight/opensans-light-webfont.woff") format("woff"), url("../../fonts/OpenSansLight/opensans-light-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
 /* Стили различных BEM-блоков*/
-.block {
-  background-color: #ccc;
-  border: 1px solid #eee;
-  color: green; }
+/*=========HEADER==========*/
+.header__top {
+  background-color: #fff;
+  color: #000; }
+
+.header__top .navbar {
+  min-height: 0;
+  margin-bottom: 0;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: "OpenSansRegular", "Arial", sans-serif;
+  text-transform: uppercase; }
+
+/*======END  HEADER=========*/
+body {
+  min-width: 320px; }
 
 img {
-  display: block;
   max-width: 100%;
-  height: auto;
-  border: 1px solid orange; }
-
-ul {
-  list-style: none; }
-
-h2 {
-  background-color: #eee;
-  border: 1px solid #ccc;
-  text-align: center; }
-
-h4 {
-  text-align: center; }
+  height: auto; }

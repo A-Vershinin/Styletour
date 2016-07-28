@@ -1,3 +1,3 @@
-# Type Project
+# Интернет-магазин
 
 * author: Anatolii Vershinin

@@ -3,7 +3,7 @@
 <!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
 <!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="ru">
+<html lang="en">
 <!--<![endif]-->
 <head>
   <meta charset="UTF-8">
@@ -14,21 +14,78 @@
   <!-- bootstrap-grid.css -->
   <link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet">
   <!-- jquery plugines.css-->
-  <!-- <link href="css/normalize.css" rel="stylesheet"> -->
+  <link href="css/normalize.css" rel="stylesheet">
   <!-- symbols-fonts for example font-awesome-->
-  <!-- <link href="libs/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet"> -->
-  <!-- <link href="css/fonts.css" rel="stylesheet"> -->
   <link href="css/style.css" rel="stylesheet">
-  <!-- <link href="css/media.css" rel="stylesheet"> -->
 
 </head>
 <body>
-  <header class="header">
+<header class="header">
+  <div class="header__top">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse"     id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Free Shipping Over $50</a></li>
+            <li><a href="#">Articles</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="flag">
+                  <img src="img/flag.jpg" width="16" height="12" alt="Flag">
+                </span>
+                English
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Russia</a></li>
+                <li><a href="#">Franch</a></li>
+                <li><a href="#">English</a></li>
+                <li><a href="#">Spanish</a></li>
+                <li><a href="#">Ukraine</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Currecy: usd
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">USD</a></li>
+                <li><a href="#">GBP</a></li>
+                <li><a href="#">EUR</a></li>
+                <li><a href="#">RUB</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Signup</a></li>
+            <li><a class="btn" href="#">
+              <span class="glyphicon glyphicon-shopping-cart"></span>
+              Shopping cart</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+    </nav>
+  </div>
+</header>
 
-  </header>
 
-  <main class="page-content">
 
+
+  <main class="content">
   </main>
 
 
@@ -47,7 +104,7 @@
   <![endif]-->
   <!-- Query -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-  <!-- <script src="libs/bootstrap/bootstrap.min.js"></script> -->
+  <script src="libs/bootstrap/bootstrap.min.js"></script>
   <!-- Plugins Query.js -->
 
   <!-- custom scripts.js -->

@@ -7,7 +7,7 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync");
 
-gulp.task("style", function() { //Создаём таск "style"
+gulp.task("style", function() { //Создаём такс "style"
   gulp.src("sass/style.scss")   //Берём источник для обработки
     .pipe(plumber())
     .pipe(sass())   //Преобразуем Sass в CSS
