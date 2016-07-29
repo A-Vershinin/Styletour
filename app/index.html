@@ -25,14 +25,14 @@
     <nav class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header__top" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
         </div>
-        <div class="collapse navbar-collapse"     id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="header__top">
           <ul class="nav navbar-nav">
             <li><a href="#">Support</a></li>
             <li><a href="#">Free Shipping Over $50</a></li>
@@ -41,8 +41,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <span class="flag">
                   <img src="img/flag.jpg" width="16" height="12" alt="Flag">
-                </span>
-                English
+                </span> English
                 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
@@ -69,24 +68,157 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Login</a></li>
             <li><a href="#">Signup</a></li>
-            <li><a class="btn" href="#">
-              <span class="glyphicon glyphicon-shopping-cart"></span>
-              Shopping cart</a>
+            <li>
+              <a class="btn-red" href="#">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Shopping cart</a>
             </li>
           </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-      </div>
-      <!-- /.container -->
+        </div> <!-- /.navbar-collapse -->
+
+      </div> <!-- /.container -->
     </nav>
-  </div>
+  </div>   <!-- /.header__top -->
+
+  <section class="menu__carousel">
+    <div class="header__bottom">
+      <nav class="navbar navbar-inverse">
+        <div class="container">
+          <div class="header__bottom_bg">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header__bottom" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">
+                <img src="img/logo.png" width="111" height="144" alt="StyleTour">
+                <span>Styletour</span>
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="header__bottom">
+              <ul class="nav navbar-nav">
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Sale</a></li>
+              </ul>
+
+              <div class="nav navbar-nav navbar-right">
+                <form class="navbar-form navbar-left" method="get" action="#">
+                  <div class="input-group">
+                    <span class="input-group-btn">
+                      <input type="text" class="form-control" placeholder="Search">
+                      <button type="submit" class="btn btn-default" name="go">
+                        <i class="glyphicon glyphicon-search"></i>
+                      </button>
+                    </span>
+                  </div>
+                </form>
+              </div>
+            </div> <!-- /.navbar-collapse -->
+            <i class="search glyphicon glyphicon-search"></i>
+          </div> <!-- /.header__bottom_bg -->
+        </div>     <!-- /.container -->
+      </nav> <!-- /.navbar-inverse -->
+    </div>   <!-- /.header__bottom -->
+    <div id="carousel" class="carousel fade" data-ride="carousel">
+      <!-- Indicators -->
+      <div class="carousel_indicators_wrap">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel" data-slide-to="1"></li>
+          <li data-target="#carousel" data-slide-to="2"></li>
+          <li data-target="#carousel" data-slide-to="3"></li>
+        </ol>
+      </div>
+      <!-- /.carousel_indicators_wrap -->
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">>
+          <div class="bg_slide"></div>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Women's Apparel</h1>
+              <p>T-Shirts, Dress Shirts, Tanks, Pants and More...</p>
+              <a class="btn btn-red" href="#">Shop Women’s Apparel</a>
+            </div>
+          </div>
+        </div>
+        <div class="item ">
+          <div class="bg_slide"></div>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Women's Apparel 2</h1>
+              <p>T-Shirts, Dress Shirts, Tanks, Pants and More...</p>
+              <a class="btn btn-red" href="#">Shop Women’s Apparel2</a>
+            </div>
+          </div>
+        </div>
+        <div class="item ">
+          <div class="bg_slide"></div>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Women's Apparel 3</h1>
+              <p>T-Shirts, Dress Shirts, Tanks, Pants and More...</p>
+              <a class="btn btn-red" href="#">Shop Women’s Apparel 3</a>
+            </div>
+          </div>
+        </div>
+        <div class="item ">
+          <div class="bg_slide"></div>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Women's Apparel 4</h1>
+              <p>T-Shirts, Dress Shirts, Tanks, Pants and More...</p>
+              <a class="btn btn-red" href="#">Shop Women’s Apparel 4</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+  <!-- /.menu__carousel -->
+
 </header>
+<main>
+  <!-- <section class="page__slogan">
+    <div class="container">
+      <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</h1>
+    </div>
+  </section>
+  <section class="page__inner">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 col-md-push-3">
+          <div class="content">
+            <h3>Content</h3>
+          </div>
+        </div>
+        <div class="col-md-3 col-md-pull-9">
+          <div class="Sidebar">
+            <h3>Sidebar</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
 
 
-
-
-  <main class="content">
-  </main>
+</main>
 
 
 
