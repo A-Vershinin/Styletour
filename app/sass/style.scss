@@ -11,9 +11,13 @@
 
 /* Стили различных BEM-блоков*/
 @import "blocks/header.scss";
+@import "blocks/menu_carousel.scss";
+
+
+
 @import "blocks/page_slogan.scss";
 @import "blocks/page_inner.scss";
-@import "/blocks/page_content.scss";
+@import "blocks/page_content.scss";
 @import "blocks/sidebar";
 
 

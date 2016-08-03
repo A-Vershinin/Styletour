@@ -9,6 +9,8 @@ var gutil = require('gulp-util');
 var minify = require("gulp-csso"); //Подключаем плагин для сжатия css
 var rename = require("gulp-rename"); //Подключаем плагин для переименования
 var imagemin = require("gulp-imagemin"); //Подключаем плагин для сжатия картинок
+var imageminOptipng = require('imagemin-optipng');
+var imageminJpegtran = require('imagemin-jpegtran');
 var svgmin = require("gulp-svgmin"); //Подключаем плагин для сжатия svg
 var svgstore = require("gulp-svgstore"); //Подключаем для создания svg-спрайта
 var run = require("run-sequence"); //Плагин для последовательной работы тасков
@@ -27,10 +29,10 @@ gulp.task("style", function() { //Создаём таск "style"
         "last 2 Firefox versions",
         "last 2 Opera versions",
         "last 2 Edge versions"
-      ]}),
-      mqpacker({  // объеденяем медиавыражения
-        sort: true
-      })
+      ]})
+      // mqpacker({  // объеденяем медиавыражения
+      //   sort: true
+      // })
     ]))
     .pipe(gulp.dest("build/css"))  //Выгружаем результаты в папку CSS
     .pipe(minify())  //Делаем минификацию кода
@@ -78,14 +80,14 @@ gulp.task("copy", function () {
 });
 
 // Оптимизация картинок
-gulp.task('images', function () {
-  return gulp.src('build/img/**/*.{png,jpg,gif}')
-    .pipe(imagemin({
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true})
-    }))
-    .pipe(gulp.dest('build/img'));
-});
+// gulp.task('images', function () {
+//   return gulp.src('build/img/**/*.{png,jpg,gif}')
+//     .pipe(imagemin({
+//       imageminOptipng({optimizationLevel: 3}),
+//       imageminJpegtran({progressive: true})
+//     }))
+//     .pipe(gulp.dest('build/img'));
+// });
 
 // Оптимизируем svg картинки и собираем спрайт
 gulp.task("symbols", function() {
@@ -112,7 +114,7 @@ gulp.task("build", function (fn) {
     "clean",
     "copy",
     "style",
-    "images",
+    // "images",
     "symbols",
     "extras",
     fn
