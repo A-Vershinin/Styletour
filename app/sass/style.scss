@@ -3,51 +3,21 @@
 
 /* Переменные и миксины*/
 @import "variables.scss";
-// @import "mixins.scss";
-// @import "media.scss";
+@import "mixins.scss";
 
 /* Глобальные стили для всего проекта*/
-@import "global/fonts.scss";
-@import "global/layout.scss";
-@import "global/forms.scss";
-@import "global/type.scss";
-
+@import "fonts.scss";
+@import "main.scss";
 
 /* Стили различных BEM-блоков*/
 @import "blocks/header.scss";
-@import "blocks/content.scss";
+@import "blocks/page_slogan.scss";
+@import "blocks/page_inner.scss";
+@import "/blocks/page_content.scss";
+@import "blocks/sidebar";
+
+
+
+
+
 @import "blocks/footer.scss";
-@import "blocks/reviews.scss";
-@import "blocks/main-nav.scss";
-
-body {
-  min-width: 320px;
-  // background-color: #ececec;
-  // color: #000;
-  // font-size: 14px;
-  // font-family: "OpenSansRegular", "Arial", sans-serif;
-}
-img {
-  // display: block;
-  max-width: 100%;
-  height: auto;
-}
-/* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {
-
-}
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
-
-}
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
-
-}/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {
-
-}
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px) {
-
-}
