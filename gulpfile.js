@@ -5,14 +5,14 @@ var sass = require("gulp-sass");  // Подключаем Sass-пакет
 var plumber = require("gulp-plumber"); //Подключаем Пламбер
 var postcss = require("gulp-postcss"); //Подключаем postcss
 var autoprefixer = require("autoprefixer");  //Подключаем автопрефиксы
-var gutil = require('gulp-util');
+var gutil = require("gulp-util");
 var minify = require("gulp-csso"); //Подключаем плагин для сжатия css
 var rename = require("gulp-rename"); //Подключаем плагин для переименования
 var imagemin = require("gulp-imagemin"); //Подключаем плагин для сжатия картинок
-var imageminOptipng = require('imagemin-optipng');
-var imageminJpegtran = require('imagemin-jpegtran');
 var svgmin = require("gulp-svgmin"); //Подключаем плагин для сжатия svg
 var svgstore = require("gulp-svgstore"); //Подключаем для создания svg-спрайта
+
+var mqpacker = require("css-mqpacker");
 var run = require("run-sequence"); //Плагин для последовательной работы тасков
 var del = require("del"); //Плагин для удаления файлов
 var server = require("browser-sync"); //Подключаем браузер-синк(слежение в браузере)
@@ -29,10 +29,10 @@ gulp.task("style", function() { //Создаём таск "style"
         "last 2 Firefox versions",
         "last 2 Opera versions",
         "last 2 Edge versions"
-      ]})
-      // mqpacker({  // объеденяем медиавыражения
-      //   sort: true
-      // })
+      ]}),
+      mqpacker({
+        sort: true
+      })
     ]))
     .pipe(gulp.dest("build/css"))  //Выгружаем результаты в папку CSS
     .pipe(minify())  //Делаем минификацию кода
@@ -50,7 +50,7 @@ gulp.task("serve", function() {
     ui: false
   });
 
-  gulp.watch("app/sass/**/*.{scss,sass}", ["style"]);  //Наблюдение за scss файлами в папке scss
+  gulp.watch("sass/**/*.{scss,sass}", ["style"]);  //Наблюдение за scss файлами в папке scss
   gulp.watch("js/**/*.js");  //Наблюдение за js файлами в папке проекта
   gulp.watch("*.html").on("change", server.reload); //Наблюдение за html файлами в папке проекта
 });
@@ -58,11 +58,9 @@ gulp.task("serve", function() {
 // ====================================================
 // ================= Сборка проекта BUILD =============
 
-// Очистка папки
-gulp.task('clean', function () {
-  return del('build')
-  // return gulp.src('build')
-  //   .pipe(clean());
+// Чистка папки
+gulp.task("clean", function () {
+  return del("build");
 });
 
 // Копируем файлы в папку build
@@ -72,22 +70,22 @@ gulp.task("copy", function () {
     "app/fonts/**/*.{woff,woff2}",
     "app/img/**/*",
     "app/*.html",
-    "app/libs/**/*."
+    "app/libs/**"
   ], {
-    base: '.'
+    base: "app"
   })
     .pipe(gulp.dest("build"));
 });
-
 // Оптимизация картинок
-// gulp.task('images', function () {
-//   return gulp.src('build/img/**/*.{png,jpg,gif}')
-//     .pipe(imagemin({
-//       imageminOptipng({optimizationLevel: 3}),
-//       imageminJpegtran({progressive: true})
-//     }))
-//     .pipe(gulp.dest('build/img'));
-// });
+gulp.task("images", function () {
+  return gulp.src("build/img/**/*.{png,jpg,gif}")
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.jpegtran({progressive: true})
+    ]))
+    .pipe(gulp.dest("build/img"));
+});
+
 
 // Оптимизируем svg картинки и собираем спрайт
 gulp.task("symbols", function() {
@@ -101,11 +99,12 @@ gulp.task("symbols", function() {
 });
 
 // Остальные файлы, такие как favicon.ico и пр.
-gulp.task('extras', function () {
+gulp.task("extras", function () {
   return gulp.src([
-    'app/*.*',
-    '!app/*.html'
-  ]).pipe(gulp.dest('build'));
+    "app/*.*",
+    "!app/*.html"
+  ])
+  .pipe(gulp.dest("build"));
 });
 
 // Собираем папку BUILD
@@ -114,7 +113,7 @@ gulp.task("build", function (fn) {
     "clean",
     "copy",
     "style",
-    // "images",
+    "images",
     "symbols",
     "extras",
     fn

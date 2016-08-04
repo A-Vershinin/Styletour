@@ -16,8 +16,6 @@
   "devDependencies": {
     "autoprefixer": "6.3.6",
     "browser-sync": "2.12.10",
-    "css-mqpacker": "5.0.1",
-    "del": "2.2.0",
     "editorconfig-tools": "0.1.1",
     "gulp": "3.9.1",
     "gulp-csso": "2.0.0",
@@ -30,7 +28,9 @@
     "gulp-svgstore": "6.0.0",
     "imagemin-jpegtran": "^5.0.2",
     "imagemin-optipng": "^5.1.1",
-    "run-sequence": "1.2.1"
+    "run-sequence": "1.2.1",
+    "css-mqpacker": "5.0.1",
+    "del": "2.2.0"
   },
   "scripts": {
     "test": "editorconfig-tools check *",
