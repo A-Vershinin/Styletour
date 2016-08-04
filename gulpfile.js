@@ -11,15 +11,15 @@ var rename = require("gulp-rename"); //Подключаем плагин для 
 var imagemin = require("gulp-imagemin"); //Подключаем плагин для сжатия картинок
 var svgmin = require("gulp-svgmin"); //Подключаем плагин для сжатия svg
 var svgstore = require("gulp-svgstore"); //Подключаем для создания svg-спрайта
-
+var concat = require("gulp-concat") // для конкатинации файлов
+var uglify = require("gulp-uglifyjs") //для сжатия всех скриптов
 var mqpacker = require("css-mqpacker");
 var run = require("run-sequence"); //Плагин для последовательной работы тасков
 var del = require("del"); //Плагин для удаления файлов
 var server = require("browser-sync"); //Подключаем браузер-синк(слежение в браузере)
 
-// Компиляция таска style
 gulp.task("style", function() { //Создаём таск "style"
-  gulp.src("app/sass/style.scss")   //Берём все файлы sass для обработки
+  gulp.src("app/sass/style.scss")   //Берём файл sass для обработки
     .pipe(plumber()) //Запрещаем ошибкам прерывать скрипт
     .pipe(sass())   //Преобразуем Sass в CSS
     .pipe(postcss([  //Добавляем префиксы под разные версии
@@ -31,7 +31,7 @@ gulp.task("style", function() { //Создаём таск "style"
         "last 2 Edge versions"
       ]}),
       mqpacker({
-        sort: true
+        sort: true //соеденяем все медиазапросы
       })
     ]))
     .pipe(gulp.dest("build/css"))  //Выгружаем результаты в папку CSS
@@ -41,18 +41,16 @@ gulp.task("style", function() { //Создаём таск "style"
     .pipe(server.reload({stream: true})); //После сборки делаем перезагрузку страницы
 });
 
-// Компиляция таска serve
-gulp.task("serve", function() {
+gulp.task("serve",  function() {
   server.init({
-    server: "build",
+    server: "app",
     notify: false,
     open: true,
     ui: false
   });
-
-  gulp.watch("sass/**/*.{scss,sass}", ["style"]);  //Наблюдение за scss файлами в папке scss
-  gulp.watch("js/**/*.js");  //Наблюдение за js файлами в папке проекта
-  gulp.watch("*.html").on("change", server.reload); //Наблюдение за html файлами в папке проекта
+  gulp.watch("app/sass/**/*.{scss,sass}", ["style"]);  //Наблюдение за scss файлами в папке scss
+  gulp.watch("app/js/**/*.js");  //Наблюдение за js файлами в папке проекта
+  gulp.watch("app/*.html").on("change", server.reload); //Наблюдение за html файлами в папке проекта
 });
 // ====================================================
 // ====================================================
@@ -62,7 +60,6 @@ gulp.task("serve", function() {
 gulp.task("clean", function () {
   return del("build");
 });
-
 // Копируем файлы в папку build
 gulp.task("copy", function () {
   return gulp.src([
@@ -85,8 +82,6 @@ gulp.task("images", function () {
     ]))
     .pipe(gulp.dest("build/img"));
 });
-
-
 // Оптимизируем svg картинки и собираем спрайт
 gulp.task("symbols", function() {
   return gulp.src("build/img/icons/*.svg")
@@ -97,7 +92,6 @@ gulp.task("symbols", function() {
     .pipe(rename("symbols.svg"))
     .pipe(gulp.dest("build/img"));
 });
-
 // Остальные файлы, такие как favicon.ico и пр.
 gulp.task("extras", function () {
   return gulp.src([
@@ -106,7 +100,16 @@ gulp.task("extras", function () {
   ])
   .pipe(gulp.dest("build"));
 });
-
+// Подключаем минифицированные библиотеки
+gulp.task("scripts", function() {
+  return gulp.src([
+    "app/libs/jquery/dist/jquery.min.js",
+    "app/libs/magnific-popup/dist/jquery.magnific-popup.min.js",
+  ])
+  .pipe(concat("libs.min.js"))
+  .pipe(uglify())
+  .pipe(gulp.dest("app/js"));
+});
 // Собираем папку BUILD
 gulp.task("build", function (fn) {
   run(
