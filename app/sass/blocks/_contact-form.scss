@@ -1,0 +1,89 @@
+.contact-form {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  width: rem(368px);
+  padding: 5.5%;
+  align-items: center;
+  background-color: $bg-3;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.contact-form__block {
+  width: 100%;
+}
+.contact-form__label {
+}
+.contact-form__input,
+.contact-form__texarea {
+  display: block;
+  width: 100%;
+  height: rem(40px);
+  margin-bottom: rem(20px);
+  padding: 0 rem(18px);
+  font-size: rem(16px);
+  line-height: 1;
+  font-family: $opensans-regular;
+  font-weight: 400;
+  color: $gray-2;
+  background-color: $bg-3;
+  text-overflow: ellipsis;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+  &:focus {
+    border-color: $accent;
+  }
+  &::-webkit-input-placeholder {
+    font-size: rem(14px);
+    color: $gray-2;
+    font-style: italic;
+  }
+  &:-moz-placeholder {
+    font-size: rem(14px);
+    color: $gray-2;
+    font-style: italic;
+  }
+  &:-ms-input-placeholder {
+    font-size: rem(14px);
+    color: $gray-2;
+    font-style: italic;
+  }
+}
+
+.contact-form__texarea {
+  height: rem(118px);
+  padding: rem(15px) rem(20px);
+  resize: none;
+}
+.contact-form__btn {
+  display: block;
+  width: 100%;
+  padding: 0 rem(10px);
+  color: $gray-5;
+  background-color: $accent;
+  font-size: rem(13px);
+  line-height: rem(40px);
+  font-family: $raleway-bold;
+  font-weight: 400;
+  text-align: center;
+  border: none;
+  &:hover {
+    background-color: $accent-active;
+  }
+}
+
+@media screen and #{($laptop-point-widths-des)} {
+
+}
+@media screen and #{($tablet-point-widths-des)} {
+ .contact-form {
+   display: block;
+   margin: 0 auto;
+ }
+}
+@media screen and #{($phone-point-widths-des)} {
+
+}

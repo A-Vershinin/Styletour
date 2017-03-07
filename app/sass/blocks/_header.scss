@@ -1,0 +1,91 @@
+.header {
+
+}
+.header__top {
+  & .container ,
+    .navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  & .navbar {
+    min-height: 86px;
+    min-height: 0;
+    margin-bottom: 0;
+    background-color: $bg-2;
+    padding: 18px 0;
+    border: 0;
+    text-transform: uppercase;
+  }
+  & .navbar-right {
+    margin-right: 0;
+  }
+  & .dropdown-toggle {
+      & .flag {
+        display: inline-block;
+        vertical-align: text-bottom;
+        & img {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+    .caret {
+      display: inline-block;
+      vertical-align: inherit;
+      border-top: 10px dashed #d1d1d1;
+      margin-left: 6px;
+      border-right: 6px solid transparent;
+      border-left: 6px solid transparent;
+    }
+  }
+  .header__list .header__link {
+    font-size: 14px;
+    color: $gray-1;
+    font-weight: 400;
+    font-family: $opensans-regular;
+    transition: all .3s ease;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .header__list li a {
+    padding: 7px 15px;
+  }
+  .header__list .header__btn {
+    padding: 6px 24px;
+    border-radius: 3px;
+    color: #fff;
+    background-color: $red-2;
+    .fa {
+      margin-right: 15px;
+      font-size: 18px;
+      font-family: "FontAwesome";
+      line-height: inherit;
+      color: #fff;
+    }
+  }
+}
+.header .navbar .header__list li .header__btn:hover {
+  background-color: $red-1;
+  text-decoration: none;
+}
+
+@media screen and #{($desktop-point-widths-des)}{
+  .header__top {
+    & .navbar-nav {
+      float: none!important;
+    }
+  }
+}
+
+@media screen and #{($tablet-point-widths-des)} {
+  .header__top .header__list .header__link:hover {
+    text-decoration: none;
+    background-color: $bg-1;
+  }
+  & .container {
+    .navbar-header, .navbar-collapse, .navbar-nav {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,198 @@
+
+//* миксины/расширения*//
+%clearfix {
+  &::before, &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+@mixin clearfix {
+  &::before, &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+//сброс отступов у списка
+%ul-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+//скрываем элемент
+%visually-hidden  {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+//показываем элемент
+%visually-view  {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: auto;
+  padding: auto;
+  border: auto;
+  clip: none;
+  overflow: auto;
+}
+//абсолютное центрирование
+%absolute-center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+//растягивание фона
+%cover {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+//выравнивание текста по ширине
+%justify {
+  text-align: justify;
+  line-height: 0;
+  font-size: 0;
+  text-justify: newspaper;
+  zoom: 1;
+  text-align-last: justify;
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+  }
+}
+//обрезание текста
+%text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@mixin inline-block($valign: top) {
+  display: inline-block;
+  vertical-align: $valign;
+}
+
+//перевод в rem-ы
+@function rem($px) {
+  @return $px/$font-size-base + 0rem;
+}
+
+//пример ретины
+@media #{$retina} {
+  .selector {
+  }
+}
+@mixin font-size-base {
+  @media screen and #{($desktop-point-widths-des)} {
+    font-size: $font-size-desktop;
+  }
+  @media screen and #{($laptop-point-widths-des)} {
+    font-size: $font-size-laptop;
+  }
+  @media screen and #{($tablet-point-widths-des)} {
+    font-size: $font-size-tablet;
+  }
+  @media screen and #{($phone-point-widths-des)} {
+    font-size: $font-size-phone;
+  }
+}
+//контейнер фикс px
+@mixin container() {
+  width: $desktop-inner-width; //1170
+  margin: 0 auto;
+  padding: 0 15px;
+  @media screen and #{($laptop-point-widths-des)}{
+    width: $laptop-inner-widths; //950
+  }
+  @media screen and #{($tablet-point-widths-des)} {
+    width: $tablet-inner-widths; //768
+    padding: 0 20px;
+  }
+  @media screen and #{($phone-point-widths-des)} {
+    width: $phone-inner-widths; //300
+    padding: 0 10px;
+  }
+}
+//контейнер резиновый rem
+@mixin container-fluid() {
+  max-width: $desktop-max-widths; //1200
+  margin: 0 auto;
+  padding: 0 1.25%;
+  @media screen and #{($laptop-point-widths-des)}{
+    max-width: $laptop-max-widths; //992
+  }
+  @media screen and #{($tablet-point-widths-des)} {
+    max-width: $tablet-max-widths; //768
+    padding: 0 2.5%;
+  }
+  @media screen and #{($phone-point-widths-des)} {
+    max-width: $phone-max-widths; //300
+    padding: 0 2%;
+  }
+}
+//стрелка
+@mixin arr($width, $height, $bg, $direction) {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  @if( $direction == top) {
+    border-width: 0 $width/2 + px $height + px $width/2 + px;
+    border-color: transparent transparent $bg transparent;
+  }
+  @if( $direction == right) {
+    border-width: $height/2 + px 0 $height/2 + px $width + px;
+    border-color: transparent transparent transparent $bg;
+  }
+  @if( $direction == bottom) {
+    border-width: $height + px $width/2 + px 0 $width/2 + px;
+    border-color: $bg transparent transparent transparent;
+  }
+  @if( $direction == left) {
+    border-width: $height/2 + px $width + px $height/2 + px 0;
+    border-color: transparent $bg transparent transparent;
+  }
+  @if( $direction == top-left) {
+    border-width: $height + px $width + px 0 0;
+    border-color: $bg transparent transparent transparent;
+  }
+  @if( $direction == top-right) {
+    border-width: 0 $width + px $height + px 0 ;
+    border-color: transparent $bg transparent transparent;
+  }
+  @if( $direction == bottom-right) {
+    border-width: 0 0 $height + px $width + px;
+    border-color: transparent transparent $bg transparent;
+  }
+  @if( $direction == bottom-left) {
+    border-width: $height + px 0 0 $width + px;
+    border-color: transparent transparent transparent$bg ;
+  }
+}
+//стилизация плейсхолдера
+@mixin placeholder($color: #000) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}

@@ -1,0 +1,211 @@
+.sidebar {
+  padding-top: 25px;
+  padding-bottom: 70px;
+  border-right: 3px solid #dadada;
+}
+.sidebar__list,
+.sidebar-widget__list {
+  @extend %ul-reset;
+}
+.sidebar-widget {
+  padding-bottom: 25px;
+  padding-right: 15px;
+  border-bottom: 3px solid #dadada;
+  &--noborder {
+    border-bottom: none;
+  }
+}
+.sidebar-widget__title {
+  padding-top: 25px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-family: $opensans-bold;
+  font-weight: 700;
+  color: $gray-1;
+}
+.sidebar-widget__text {
+  margin-bottom: 15px;
+  color: #585858;
+  font-family: $opensans-regular;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: justify;
+
+  &--blue {
+    color: #0a94b2;
+  }
+}
+.sidebar-widget__link {
+  display: block;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+  font-family: $opensans-regular;
+  color: $gray-1;
+  cursor: pointer;
+  transition: .4s ease;
+  &:hover {
+    color: $red-3;
+    background-color: $gray-4;
+    text-decoration: none;
+    padding-left: 10px;
+  }
+  &:active {
+    text-decoration: none;
+    transform: scale(1.03);
+  }
+  &--showMore {
+    color: $blue-1;
+    &:hover, &:active {
+      color: $blue-1;
+      font-weight: 700;
+      background-color: transparent;
+      padding-left: 0;
+      margin-top: 10px;
+    }
+  }
+}
+.sidebar {
+  .carousel {
+    overflow: hidden;
+    padding-top: 25px;
+  }
+  .carousel-inner > .item {
+    display: block;
+  }
+  .carousel-inner .item .container {
+    width: auto;
+  }
+  .carousel-slide {
+    min-height: auto;
+  }
+  .carousel-wid-caption {
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+    background-color: $bg-2;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  .carousel-wid-title {
+    margin-bottom: 15px;
+    color: $gray-1;
+    font-family: $opensans-bold;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 700;
+  }
+  .carousel-wid-caption-text {
+    margin-bottom: 20px;
+    color: #5b5b5b;
+    font-family: $opensans-regular;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+  .carousel-indicators {
+    display: block;
+    padding: 7px 0;
+  }
+  .carousel-wid-indicators-item {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    margin: 0;
+    border: 0;
+    border-radius: 50%;
+    margin: 0 10px;
+    background-color: #d2d2d2;
+    transition: width .5s ease, height .5s ease;
+  }
+  .carousel-wid-indicators-item.active {
+    background-color: $red-2;
+  }
+}
+.sidebar-banner__block {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  text-align: center;
+  background-color: $bg-2;
+}
+.sidebar-banner__title {
+  color: $gray-1;
+  font-size: 28px;
+  line-height: 28px;
+  font-family: $opensans-bold;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.sidebar-banner__text {
+  color: $gray-1;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  font-family: $opensans-regular;
+  text-transform: uppercase;
+}
+.sidebar-banner__btn {
+  margin-top: 20px;
+  padding: 8px 32px;
+  font-size: 18px;
+  line-height: 18px;
+  font-family: $opensans-bold;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: $red-2;
+  transition: .4s ease;
+  &:hover {
+    color: #fff;
+    background-color: $red-1;
+  }
+  &:active {
+    color: #fff;
+    background-color: $red-1;
+  }
+}
+@media screen and #{($laptop-point-widths-des)}{
+  .sidebar {
+    padding-bottom: 25px;
+    border-right: none;
+    .carousel {
+      padding-top: 0;
+    }
+  }
+  .sidebar-widget {
+    border-bottom: none;
+    padding-right: 0;
+  }
+}
+@media screen and #{($phone-point-widths-des)} {
+  .sidebar__list .col-xs-6 {
+    width: 100%;
+  }
+  .sidebar-widget {
+    width: 100%;
+  }
+  .sidebar-widget__title {
+    text-align: center;
+    padding-top: 0;
+  }
+  .sidebar-banner__block {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .sidebar-banner__title {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .sidebar-banner__text {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .sidebar-banner__btn {
+    margin-top: 20px;
+    padding: 7px 25px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}

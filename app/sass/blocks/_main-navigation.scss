@@ -1,0 +1,222 @@
+.main-navigation {
+  min-height: 83px;
+  position: absolute;
+  z-index: 30;
+  width: 100%;
+  .navbar-inverse {
+    border: none;
+    background-color: transparent;
+    background-image: none;
+  }
+
+}
+.main-navigation-wrap {
+  background-color: $bg-7;
+  border-radius: 3px;
+  & .navbar-header {
+    margin-left: 30px;
+  }
+  & .navbar-collapse {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+.navbar-inverse .container {
+  padding: 0;
+}
+.navbar-brand {
+  display: inline-block;
+  vertical-align: top;
+  float: none;
+  height: auto;
+  height: 50px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0;
+  font-size: 0;
+  img {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+.navbar-brand-logo {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px 20px;
+  padding: 16px 0;
+  font-size: 24px;
+  line-height: 30px;
+  font-family: $opensans-bold;
+  font-weight: 700;
+  font-variant: small-caps;
+  text-transform: uppercase;
+  color: #fff;
+}
+.main-navigation .navbar-inverse .navbar-nav > li > a {
+  padding: 16px 15px;
+  font-size: 16px;
+  font-family: $opensans-regular;
+  font-weight: 400;
+  color: #fff;
+  transition: .4s ease;
+  &:hover {
+    color: $gray-6;
+    text-decoration: underline;
+  }
+  &:active {
+    color: $gray-6;
+    text-decoration: underline;
+  }
+}
+
+.main-navigation .navbar-form {
+  padding-left: 0;
+  padding-right: 0;
+  margin-right: 15px;
+
+}
+.main-navigation .navbar-form .input-group {
+  background-color: white;
+  border-radius: 5px;
+}
+.main-navigation .navbar-form .form-control {
+  width: 264px;
+  height: 44px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border: none;
+  @include placeholder($color: $gray-2);
+  &:focus {
+    border-color: transparent;
+  }
+  &:active {
+    border-color: transparent;
+  }
+}
+.navbar-form .input-group-btn {
+  height: 44px;
+  &:focus {
+    border-color: transparent;
+  }
+  &:active {
+    border-color: transparent;
+  }
+}
+.main-navigation .navbar-form .btn {
+  height: 44px;
+  border-color: transparent;
+  & .fa-search {
+    font-size: 18px;
+    color: $gray-2;
+  }
+  &:hover {
+    .fa-search {
+      color: $gray-1;
+    }
+  }
+  &:active {
+    border-color: transparent;
+  }
+}
+.navbar-right .search {
+  display: none;
+  position: absolute;
+  top: 22px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: .4s ease;
+  &:hover {
+    color: $gray-6;
+  }
+}
+.main-navigation .navbar-form {
+  display: block;
+}
+@media screen and #{($desktop-point-widths-des)}{
+  .main-navigation .navbar-nav {
+    float: none;
+  }
+  .main-navigation .navbar-right {
+    float: left!important;
+    margin-left: 140px;
+  }
+  .navbar-right .search {
+    display: block;
+  }
+  .main-navigation .navbar-form {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 84px;
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, .5);
+  }
+}
+@media screen and #{($laptop-point-widths-des)}{
+
+  .main-navigation .navbar-nav {
+    margin-left: 18%;
+  }
+  .main-navigation .navbar-left {
+    margin-left: 12px;
+  }
+  .navbar-right .search {
+    right: 0;
+  }
+  .main-navigation .navbar-form {
+    top: 136px;
+  }
+}
+@media screen and #{($tablet-point-widths-des)} {
+  .navbar-brand-logo {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .main-navigation .navbar-inverse .navbar-nav > li > a {
+    &:hover {
+      color: $red-2;
+      text-decoration: none;
+      background-color: $bg-4;
+    }
+  }
+  .main-navigation .navbar-form .form-control {
+    width: 100%;
+  }
+  .main-navigation .navbar-left {
+    padding: 0;
+  }
+  .main-navigation .navbar-brand img {
+    max-height: 50px;
+  }
+  .main-navigation .navbar-toggle.collapsed + .navbar-brand img{
+    max-height: none;
+    position: relative;
+    z-index: 25;
+  }
+  .main-navigation .navbar-form {
+    position: relative;
+    top: 0;
+    display: block!important;
+  }
+  .navbar-right .search {
+    display: none;
+  }
+}
+@media screen and #{($phone-point-widths-des)} {
+  .main-navigation .navbar-toggle.collapsed + .navbar-brand img{
+    max-height: 80px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main-navigation .navbar-form {
+    display: block!important;
+  }
+}

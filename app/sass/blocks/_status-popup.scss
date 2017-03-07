@@ -1,0 +1,32 @@
+.status-popup {
+
+  margin-top: rem(100px);
+  display: none;
+}
+.status-popup__inner {
+  display: block;
+  width: rem(250px);
+  padding: rem(10px);
+  background-color: #ccc;
+  text-align: center;
+}
+.status-popup__title {
+  margin-bottom: rem(20px);
+  color: $gray-5;
+  font-size: rem(16px);
+  font-family: $raleway-regular;
+  font-weight: 400;
+
+}
+.status-popup__close {
+  border: none;
+  padding-left: rem(35px);
+  padding-right: rem(35px);
+  font-size: rem(13px);
+  font-weight: 700;
+  color: $gray-5;
+  background-color: $accent;
+  &:hover {
+    background-color: $accent-active;
+  }
+}

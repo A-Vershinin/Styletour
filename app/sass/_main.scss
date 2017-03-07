@@ -1,0 +1,98 @@
+//*Общие стили*//
+html,
+body {
+  min-width: 320px;
+  // min-width: 750px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: $font-size-base;
+  line-height: $lin-height-base;
+  font-family: $opensans-regular;
+  font-weight: 400;
+  color: $gray-1;
+  background-color: $bg-1;
+  -webkit-overflow-scrolling: touch;
+
+}
+html {
+  @include font-size-base();
+}
+input, textarea {
+  color: $gray-1;
+  background-color: $bg-1;
+  border: 1px solid $gray-2;
+  font-size: $font-size-base;
+  line-height: $lin-height-base;
+  font-family: $opensans-regular;
+  border-radius: 5px;
+  &::-webkit-input-placeholder {
+    color: $gray-3;
+  }
+  &:-moz-placeholder {
+    color: $gray-3;
+  }
+  &:-ms-input-placeholder {
+    color: $gray-3;
+  }
+}
+a:visited,
+a:link {
+  // color: $light-1;
+}
+input:hover,
+textarea:hover {
+  color: $gray-1;
+  cursor: pointer;
+}
+input:focus,
+textarea:focus {
+  // border: 2px solid $blue-1;
+}
+input:valid,
+textarea:valid {
+  // border-color: #6ec292;
+}
+input:invalid,
+textarea:invalid {
+  // border-color: #f0b1b1;
+}
+img, video {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+h1, h2, h3, h4, h5, h6, p, figure {
+  margin: 0;
+  padding: 0;
+}
+.visually-hidden {
+  @extend %visually-hidden;
+}
+.visually-view {
+  @extend %visually-view;
+}
+//Липкий футер
+.wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  height: 100vh;
+}
+.wrapper > .header,
+.wrapper > .page-promo,
+.wrapper > .page-wrap,
+.wrapper > .footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  flex: 0 0 auto;
+}
+.wrapper > .content {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+  flex: 1 0 auto;
+}

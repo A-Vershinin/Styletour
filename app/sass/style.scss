@@ -1,27 +1,38 @@
-/* подключаем все кусочки кодов в главный файл*/
-// @import "normalize.scss";
-
-/* Переменные и миксины*/
-@import "variables.scss";
-@import "mixins.scss";
-
-/* Глобальные стили для всего проекта*/
-@import "fonts.scss";
-@import "main.scss";
-
-/* Стили различных BEM-блоков*/
-@import "blocks/header.scss";
-@import "blocks/menu_carousel.scss";
+// подключаем все кусочки кодов в главный файл//
 
 
+// Переменные и миксины//
+@import "_variables.scss";
+@import "_mixins.scss";
 
-@import "blocks/page_slogan.scss";
-@import "blocks/page_inner.scss";
-@import "blocks/page_content.scss";
-@import "blocks/sidebar";
+// Глобальные стили для всего проекта//
+@import "_fonts.scss";
+@import "_main.scss";
+@import "sprites/sprite.scss";
+
+//Стили widgets/libs//
+@import "widgets/_bootstrap.scss";
+
+//Стили BEM-блоков//
+// index.html
+@import "blocks/_wrapper.scss";
+// @import "blocks/_container.scss";
+// @import "blocks/_btn.scss";
+@import "blocks/_header.scss";
+@import "blocks/_carousel.scss";
+@import "blocks/_main-navigation.scss";
+@import "blocks/_page-promo.scss";
+@import "blocks/_page-wrap.scss";
+@import "blocks/_content.scss";
+@import "blocks/_sidebar.scss";
+// @import "blocks/_logo.scss";
+// @import "blocks/_menu.scss";
+// @import "blocks/_contact-form.scss";
+// @import "blocks/_status-popup.scss";
+// @import "blocks/_header.scss";
+// @import "blocks/_socials.scss";
+// @import "blocks/_footer.scss";
 
 
-
-
-
-@import "blocks/footer.scss";
+//catalog.html
+// @import "blocks/catalog-page.scss";
