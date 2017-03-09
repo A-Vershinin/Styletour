@@ -52,6 +52,7 @@
     text-indent: 9999px;
     background-color: #bcbcbc;
     border-radius: 2px;
+    transition: .4s ease;
     cursor: pointer;
     z-index: 30;
     &::before, &::after {
@@ -64,7 +65,7 @@
     }
     &::after {
      border-right: 8px solid #bcbcbc;
-     left: 3px;
+     left: 4px;
     }
     &:hover {
       &::before, &::after {
@@ -116,7 +117,7 @@
   .products__item {
     position: relative;
     z-index: 20;
-    height: 440px;
+    // height: 440px;
     height: 485px;
     padding-top: 30px;
     padding-bottom: 25px;
@@ -127,6 +128,9 @@
     transition: all .3s ease;
     &:hover {
       box-shadow: $box-shadow-2;
+    }
+    &:nth-child(3n) {
+      margin-right: 0;
     }
   }
   .products__favorites,
@@ -141,7 +145,6 @@
   }
   .produsts__sale {
     right: auto;
-    left: 15px;
     display: block;
     width: 52px;
     height: 52px;
@@ -155,11 +158,16 @@
     & span {
       color: $gray-1;
     }
+    &--left {
+      left: 15px;
+    }
   }
   .products__img {
-    min-height: 200px;
-    max-height: 200px;
     margin-bottom: 10px;
+    & img {
+      min-height: 200px;
+      max-height: 200px;
+    }
   }
   .products__link {
     display: block;
@@ -248,11 +256,35 @@
 }
 
 @media screen and #{($desktop-point-widths-des)} {
-
+  .products {
+    .produsts__sale {
+      width: 44px;
+      height: 44px;
+      font-size: 12px;
+      line-height: 44px;
+    }
+    .products__favorites {
+      font-size: 17px;
+    }
+    .products__img img {
+      min-height: 180px;
+      max-height: 180px;
+    }
+    .products__item {
+      height: 470px;
+    }
+  }
 }
 @media screen and #{($laptop-point-widths-des)} {
   .products {
     padding-top: 25px;
+    .products__item {
+      height: 450px;
+    }
+    .products__img img {
+      min-height: 160px;
+      max-height: 160px;
+    }
   }
 }
 
@@ -268,17 +300,45 @@
       margin-bottom: 20px;
       padding-bottom: 0;
     }
+    .products__img img {
+      min-height: 140px;
+      max-height: 140px;
+    }
     .products__buy {
       position: relative;
     }
   }
 }
 @media screen and #{($phone-point-widths-des)} {
+  .products {
 
-  .products__item {
-    height: auto;
-  }
-  .products__buy {
-    position: relative;
+    .products__row {
+      .col-xs-6 {
+        width: 100%;
+        float: none;
+      }
+    }
+    .products__title-row {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .products__navigation {
+      float: none;
+      display: block;
+    }
+    .products__all {
+      display: block;
+      float: left;
+    }
+    .products__arrows {
+      display: block;
+      float: right;
+    }
+    .products__item {
+      height: auto;
+    }
+    .products__buy {
+      position: relative;
+    }
   }
 }
