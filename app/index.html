@@ -13,13 +13,14 @@
   <meta name="author" content="Anatoliy Vershinin">
   <!-- favicon.ico -->
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css"
     integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
   <!-- build:css css/libs.css -->
   <link href="bower/normalize-css/normalize.css" rel="stylesheet">
   <link href="bower/animate.css/animate.min.css" rel="stylesheet">
+  <link href="bower/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
   <!-- endbuild -->
   <link href="css/style.css" rel="stylesheet">
   <!--[if lt IE 9]>
@@ -97,7 +98,7 @@
           </div>
         </nav>
       </div>
-      <section class="header__bottom">
+      <div class="header__bottom">
         <div class="carousel fade" id="carousel" data-ride="carousel">
           <!-- main navigation -->
           <div class="main-navigation">
@@ -193,7 +194,7 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
-      </section>
+      </div>
     </header>
     <!-- END HEADER -->
 
@@ -210,7 +211,87 @@
         <div class="row">
           <div class="col-md-9 col-md-push-3">
             <main class="content">
-              <h2>content</h2>
+                <div class="products">
+                  <div class="products__row">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <h2 class="products__title-row">Items on Demand</h2>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="products__navigation">
+                          <!-- <div class="row"> -->
+                            <!-- <div class="col-xs-6"> -->
+                              <a href="#" class="products__all">View All Items</a>
+                            <!-- </div> -->
+                            <!-- <div class="col-xs-6"> -->
+                              <div class="products__arrows">
+                                <a href="#" class="products__arrow-prev">prev</a>
+                                <a href="#" class="products__arrow-next">next</a>
+                              <!-- </div> -->
+                            <!-- </div> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <ul class="products__list">
+                        <div class="col-sm-4">
+                          <li class="products__item">
+                            <div class="products__favorites">
+                              <i class="fa fa-heart" aria-hidden="true"></i>
+                            </div>
+                            <div class="products__img">
+                              <a href="#" class="products__link">
+                                <img src="img/content/item1@1x.png" alt="CREAM JANE JEANS DRESS">
+                              </a>
+                            </div>
+                            <h3 class="products__title"><a href="#" class="products__title-link">CREAM JANE JEANS DRESS</a></h3>
+                            <div class="products__desc">Signature NYX cosmetics</div>
+                            <div class="products__buy">
+                              <div class="products__price">Price: €<span>10.00</span></div>
+                              <a href="#" class="btn products__btn">Add to cart</a>
+                            </div>
+                          </li>
+                        </div>
+                        <div class="col-sm-4">
+                          <li class="products__item">
+                            <div class="produsts__sale"><span>sale</span></div>
+                            <div class="products__img">
+                              <a href="#" class="products__link">
+                                <img src="img/content/item2@1x.png" alt="CREAM SISSI TUNIC">
+                              </a>
+                            </div>
+                            <h3 class="products__title"><a href="#" class="products__title-link">CREAM SISSI TUNIC</a></h3>
+                            <div class="products__desc">Lightweight with just a hint of sheer color, this</div>
+                            <div class="products__buy">
+                              <div class="products__price">Price: €<span>20.00</span></div>
+                              <a href="#" class="btn products__btn">Add to cart</a>
+                            </div>
+                          </li>
+                        </div>
+                        <div class="col-sm-4">
+                          <li class="products__item">
+                            <div class="products__img">
+                              <a href="#" class="products__link">
+                                <img src="img/content/item3@1x.png" alt="Big doodle shawl">
+                              </a>
+                            </div>
+                            <h3 class="products__title"><a href="#" class="products__title-link">Big doodle shawl - blue/black</a></h3>
+                            <div class="products__desc">Lightweight with just a hint of sheer color, this hydrating
+                              Lorem ipsum dolor sit amet m ipsum dolor.</div>
+                            <div class="products__buy">
+                              <div class="products__price">Price: €<span>09.00</span></div>
+                              <a href="#" class="btn products__btn">Add to cart</a>
+                            </div>
+                          </li>
+                        </div>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+
+
             </main>
           </div>
           <div class="col-md-3 col-md-pull-9">
@@ -398,11 +479,11 @@
   <!-- libs scripts.js -->
   <!-- build:js js/libs.min.js -->
   <script src="bower/jQuery/dist/jquery.js"></script>
-  <!-- <script src="bower/bootstrap/dist/js/bootstrap.js"></script> -->
+  <script src="bower/bootstrap/dist/js/bootstrap.js"></script>
   <!-- endbuild -->
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
   <!-- custom scripts.js -->
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
   <script src="js/common.js"></script>
