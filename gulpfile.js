@@ -48,8 +48,8 @@ gulp.task("style", function() { //Создаём таск "style"
       })
     ]))
     .pipe(gulp.dest("build/css"))  //Выгружаем результаты в папку build/css
-    .pipe(sourcemaps.write())
     .pipe(csso())  //Делаем минификацию кода.
+    .pipe(sourcemaps.write())
     .pipe(rename("style.min.css")) //переименовываем файл style в style.min
     .pipe(gulp.dest("build/css")) //выгружаем в build/css
     .pipe(server.reload({stream: true})); //После сборки делаем перезагрузку страницы
@@ -187,19 +187,18 @@ gulp.task("extras", function() {
 });
 //js-common
 gulp.task("js-common", function() {
-  return gulp.src("app/js/common.js") //берём файл common.js в app/js
+  return gulp.src("app/js/common.js")
   .pipe(gulp.dest("build/js"))
-  // .pipe(uglify())  //cжимаем common.js
-  .pipe(rename("common.min.js")) //переименовываем файл common.js в common.min.js
-  .pipe(gulp.dest("build/js"))  //Выгружаем результаты в папку build/css
+  .pipe(uglify())
+  .pipe(rename("common.min.js"))
+  .pipe(gulp.dest("build/js"))
 });
 //js-библиотеки
 gulp.task("js-libs", function() {
-  // return gulp.src("app/bower_modules/**/*.js") //берём все файлы .js в bower_modules
-  return gulp.src("build/js/libs.min.js")
-  .pipe(uglify())  //cжимаем libs.min.js
+  return gulp.src("build/js/libs.js")
+  .pipe(uglify())
   .pipe(rename("libs.min.js"))
-  .pipe(gulp.dest("build/js")); //выгружаем в build/js
+  .pipe(gulp.dest("build/js"));
 });
 //js-polyfills
 gulp.task("js-polyfills", function() {
