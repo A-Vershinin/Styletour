@@ -1,4 +1,4 @@
-#  "template"
+#  "Styletour"
 
 * Author: Anatoliy Vershinin
 

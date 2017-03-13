@@ -2,8 +2,9 @@
   "name": "styletour",
   "devDependencies": {
     "normalize-css": "^5.0.0",
-    "jQuery": "^3.1.1",
+    "picturefill": "^3.0.2",
+    "jquery": "^3.1.1",
     "bootstrap": "^3.3.7",
-    "font-awesome": "^4.7.0"
+    "owl.carousel": "^2.2.1"
   }
 }

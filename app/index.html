@@ -19,8 +19,8 @@
     integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
   <!-- build:css css/libs.css -->
   <link href="bower/normalize-css/normalize.css" rel="stylesheet">
-  <link href="bower/animate.css/animate.min.css" rel="stylesheet">
   <link href="bower/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  <link href="bower/owl.carousel/dist/assets/owl.carousel.css" rel="stylesheet">
   <!-- endbuild -->
   <link href="css/style.css" rel="stylesheet">
   <!--[if lt IE 9]>
@@ -618,6 +618,65 @@
         </div>
       </div>
     </section>
+
+    <section class="brands">
+      <div class="row">
+        <div class="container">
+          <div class="brands__block">
+            <ul class="brands__list owl-carousel" id="brands-slider">
+              <li class="brands__item">
+                  <a href="#" class="brands__link">
+                    <picture>
+                      <img src="img/content/brend1@1x.png"
+                        srcset="img/content/brend1@2x.png 2x" alt="brend1">
+                    </picture>
+                  </a>
+              </li>
+              <li class="brands__item">
+                  <a href="#" class="brands__link">
+                    <picture>
+                      <img src="img/content/brend2@1x.png" srcset="img/content/brend2@2x.png 2x" alt="brend2">
+                    </picture>
+                  </a>
+              </li>
+              <li class="brands__item">
+                  <a href="#" class="brands__link">
+                    <picture>
+                      <img src="img/content/brend3@1x.png" srcset="img/content/brend3@2x.png 2x" alt="brend3">
+                    </picture>
+                  </a>
+              </li>
+              <li class="brands__item">
+                  <a href="#" class="brands__link">
+                    <picture>
+                      <img src="img/content/brend4@1x.png" srcset="img/content/brend4@2x.png 2x" alt="brend4">
+                    </picture>
+                  </a>
+              </li>
+              <li class="brands__item">
+                  <a href="#" class="brands__link">
+                    <picture>
+                      <img src="img/content/brend3@1x.png" srcset="img/content/brend3@2x.png 2x" alt="brend3">
+                    </picture>
+                  </a>
+              </li>
+              <li class="brands__item">
+                  <a href="#" class="brands__link">
+                    <picture>
+                      <img src="img/content/brend2@1x.png" srcset="img/content/brend2@2x.png 2x" alt="brend2">
+                    </picture>
+                  </a>
+              </li>
+            </ul>
+            <div class="brands__arrows">
+              <div class="brands__arrow-prev">left</div>
+              <div class="brands__arrows-next">right</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- FOOTER -->
     <footer class="footer">
 
@@ -667,8 +726,9 @@
 
 
   <!-- libs scripts.js -->
-  <!-- build:js js/libs.min.js -->
-  <script src="bower/jQuery/dist/jquery.js"></script>
+  <!-- build:js js/libs.js -->
+  <script src="bower/jquery/dist/jquery.js"></script>
+  <script src="bower/owl.carousel/dist/owl.carousel.js"></script>
   <script src="bower/bootstrap/dist/js/bootstrap.js"></script>
   <!-- endbuild -->
 

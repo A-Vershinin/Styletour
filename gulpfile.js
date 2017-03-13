@@ -227,7 +227,7 @@ gulp.task("build", function(fn) {
     // "icon-fonts",
     "copy",
     "style",
-    // "images",
+    "images",
     "svg-sprite",
     "png-sprite",
     "js-common",

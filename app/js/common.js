@@ -62,6 +62,62 @@ document.addEventListener("DOMContentLoaded", function() {
         interval: false
       });
     }
+
+    //brands slider
+    brands();
+    function brands() {
+      var carousel = $('.brands__list').owlCarousel({
+        items: 7,
+        loop: true,
+        margin: 32,
+        nav: true,
+        navigation: true,
+        dots: false,
+        autoWidth: true,
+        autoplay: true,
+        autoplayHoverPause: true,
+        autoplaySpeed: 2000,
+        autoplayTimeout: 2000,
+        navSpeed: 1500,
+        smartSpeed: 1500,
+        navigationText : ["",""],
+        navContainerClass: ".brands__arrows",
+        responsiveClass: true,
+        navText: "",
+        responsive:{
+          0: {
+            items: 3,
+            nav: false
+          },
+          650: {
+            items: 3,
+            nav: false
+          },
+          768: {
+            items: 3
+            // nav: true
+          },
+          992: {
+            items: 2
+            // nav: true
+          },
+          1200: {
+            items: 4
+            // nav: true
+          }
+        }
+      });
+      $('.brands__arrow-prev').click(function(e) {
+        e.preventDefault();
+        carousel.trigger('prev.owl.carousel');
+      });
+
+      $('.brands__arrows-next').click(function(e) {
+        e.preventDefault();
+        carousel.trigger('next.owl.carousel');
+      });
+    }
+
     //sidebar loadImages
     loadImages();
     function loadImages() {
@@ -80,7 +136,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     console.log("JS active");
-
 
   })();
 });

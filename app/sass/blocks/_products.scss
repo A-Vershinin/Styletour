@@ -293,6 +293,13 @@
     .products__row {
       margin-bottom: 20px;
     }
+    .products__list {
+      & .col-sm-4 {
+        &:nth-child(n+2) {
+          display: none;
+        }
+      }
+    }
     .products__item {
       max-width: 85%;
       margin: 0 auto;

@@ -25,14 +25,15 @@
     height: 55px;
     color: #515151;
     font-family: $opensans-light;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 18px;
+    line-height: 40px;
     font-weight: 300;
     background-color: $bg-2;
     border-radius: 5px;
     box-shadow: $box-shadow-1;
     &:focus {
       border-color: $gray-1;
+      font-weight: 700;
     }
     &:hover {
       border-color: $gray-1;
@@ -48,9 +49,10 @@
     color: $light-1;
     background-color: $red-1;
     border-radius: 5px;
+    border-bottom: 4px solid #d96340;
     transition: .4s ease;
     &:hover {
-      background-color: $red-2;
+      background-color: #d96340;
     }
     &:active {
       border-color: none;
@@ -71,11 +73,15 @@
   .discounts__text {
     margin-bottom: 15px;
   }
+  .discounts__form {
+    margin-top: 10px;
+  }
 }
 @media screen and #{($tablet-point-widths-des)} {
   .discounts {
     padding: 25px 0;
   }
+
 }
 @media screen and #{($phone-point-widths-des)} {
 
