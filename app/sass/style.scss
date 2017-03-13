@@ -8,10 +8,9 @@
 // Глобальные стили для всего проекта//
 @import "_fonts.scss";
 @import "_main.scss";
-@import "sprites/sprite.scss";
+// @import "sprites/png-sprite.scss";
 
 //Стили widgets/libs//
-@import "widgets/_bootstrap.scss";
 
 //Стили BEM-блоков//
 // index.html
@@ -28,14 +27,14 @@
 @import "blocks/_products.scss";
 @import "blocks/_banner.scss";
 @import "blocks/_discounts.scss";
-// @import "blocks/_brand-slider.scss";
 @import "blocks/_brands.scss";
+@import "blocks/_socials.scss";
+@import "blocks/_footer.scss";
 // @import "blocks/_logo.scss";
 // @import "blocks/_menu.scss";
 // @import "blocks/_contact-form.scss";
 // @import "blocks/_status-popup.scss";
 // @import "blocks/_header.scss";
-// @import "blocks/_socials.scss";
 // @import "blocks/_footer.scss";
 
 

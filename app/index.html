@@ -1,216 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="format-detection" content="telephone=no">
-  <title>project name</title>
-  <!-- SEO -->
-  <meta name="description" content="description">
-  <meta name="keywords" content="keywords">
-  <meta name="author" content="Anatoliy Vershinin">
-  <!-- favicon.ico -->
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Styletour</title>
+    <!-- SEO -->
+    <meta name="description" content="description">
+    <meta name="keywords" content="keywords">
+    <meta name="author" content="Anatoliy Vershinin">
+    <!-- favicon.ico -->
 
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-  <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css"
-    integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
-  <!-- build:css css/libs.css -->
-  <link href="bower/normalize-css/normalize.css" rel="stylesheet">
-  <link href="bower/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-  <link href="bower/owl.carousel/dist/assets/owl.carousel.css" rel="stylesheet">
-  <!-- endbuild -->
-  <link href="css/style.css" rel="stylesheet">
-  <!--[if lt IE 9]>
+    <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
+    <!-- build:css css/libs.css -->
+    <link href="bower/normalize-css/normalize.css" rel="stylesheet">
+    <link href="bower/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="bower/owl.carousel/dist/assets/owl.carousel.css" rel="stylesheet">
+    <!-- endbuild -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-  <script src="https://cdn.polyfill.io/v2/polyfill.min.js" defer></script>
-</head>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js" defer></script>
+  </head>
 
 
-<body class="no-js">
-  <!-- [inf lt IE 9]
+  <body class="no-js">
+    <!-- [inf lt IE 9]
 <p class="browsehappy">Вы используете <strong>устаревший</strong>
   браузер. Пожалуйста <a href="http://browsehappy.com/">обновите</a> его.</p>
 [endif] -->
 
-    <svg display="none" xmlns="http://www.w3.org/2000/svg"></svg>
-  <div class="wrapper">
-    <!-- HEADER -->
-    <header class="header">
-      <div class="header__top">
-        <nav class="navbar navbar-default">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                data-target="#header__top" aria-expanded="false">
+    <svg display="none" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="icon-facebook" viewbox="0 0 12 24">
+        <path id="Facebook" class="cls-1" d="M1253 3327v5h-3a.988.988 0 0 0-1 1v2h4l-.98 5.02-3.02-.02v11h-5v-11h-3v-5h3l.24-3.34s-.43-4.67 4.4-4.67 4.36.01 4.36.01z" transform="translate(-1241 -3327)"/></symbol>
+      <symbol id="icon-flickr" viewbox="0 0 24 11">
+        <image width="24" height="11" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAALCAMAAABS673/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAflBMVEUAAAAKat4Kat4Kat4Kat4Kat4Kat7/GYH/GYH/GYH/GYH/GYH/GYEKat4Kat4Kat4Kat7/GYH/GYH/GYH/GYEKat4Kat7/GYH/GYEKat7/GYEKat4Kat7/GYH/GYEKat7/GYEKat7/GYEKat7/GYEKat7/GYEKat7/GYEAAADSvXWJAAAAJ3RSTlMAHpfh+ZggHpfh+ZggRfLzSEXy80gh8CHwmZng4uDi+vqamkdH4+MfGqtKAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAIJJREFUGNN1j8sSgjAMRS8UlAJSpRbwCQra/v8X2ggENpxVkjuZ5AAIQhGJeIc/+0SmMsupPBSWUEdqTqUj9BkwlR0p/E7duJEyR2hnLkDiZq64cXAHHhw8EXHQAikH3fbGcuO1vvGGUdNcGf+Vnua6Bvq1x7B4ePNYtB82z2T3JfMf6N4air0irx0AAAAASUVORK5CYII="/></symbol>
+      <symbol id="icon-twitter" viewbox="0 0 27 23">
+        <path id="Twitter" d="M1318 3330.72a10.41 10.41 0 0 1-3.18.92 5.794 5.794 0 0 0 2.43-3.21 11.1 11.1 0 0 1-3.51 1.41 5.42 5.42 0 0 0-4.05-1.84 5.679 5.679 0 0 0-5.54 5.81 5.808 5.808 0 0 0 .15 1.32 15.463 15.463 0 0 1-11.42-6.07 5.981 5.981 0 0 0-.75 2.92 5.913 5.913 0 0 0 2.46 4.84 5.471 5.471 0 0 1-2.5-.73.17.17 0 0 0-.01.07 5.744 5.744 0 0 0 4.45 5.69 5.1 5.1 0 0 1-1.46.21 5.022 5.022 0 0 1-1.04-.11 5.586 5.586 0 0 0 5.17 4.04 10.81 10.81 0 0 1-6.88 2.48 11.412 11.412 0 0 1-1.32-.08 15.129 15.129 0 0 0 8.49 2.61c10.19 0 15.76-8.85 15.76-16.52 0-.25 0-.5-.01-.75a11.5 11.5 0 0 0 2.76-3.01" transform="translate(-1291 -3328)"/></symbol>
+  </svg>
+    <div class="wrapper">
+      <!-- HEADER -->
+      <header class="header">
+        <div class="header__top">
+          <nav class="navbar navbar-default">
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header__top" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-            </div>
-            <div class="collapse navbar-collapse" id="header__top">
-              <ul class="nav navbar-nav header__list">
-                <li class="header__item"><a href="#" class="header__link">Support</a></li>
-                <li class="header__item"><a href="#" class="header__link">Free Shipping Over 50$</a></li>
-                <li class="header__item"><a href="#" class="header__link">Articles</a></li>
-                <li class="dropdown header__item">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <span class="flag"><img class="dropdown-flag" src="img/icons/icon-gb.png" width="16" height="14" alt="english-icon"/></span>
-                    English <span class="caret"></span>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">English</a></li>
-                    <li><a href="#">Russian</a></li>
-                    <li><a href="#">Franch</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown header__item">
-                  <a href="#" class="dropdown-toggle header__link" data-toggle="dropdown">
+              </div>
+              <div class="collapse navbar-collapse" id="header__top">
+                <ul class="nav navbar-nav header__list">
+                  <li class="header__item"><a href="#" class="header__link">Support</a></li>
+                  <li class="header__item"><a href="#" class="header__link">Free Shipping Over 50$</a></li>
+                  <li class="header__item"><a href="#" class="header__link">Articles</a></li>
+                  <li class="dropdown header__item">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <span class="flag"><img class="dropdown-flag" src="img/icons/icon-gb.png" width="16" height="14" alt="english-icon"/></span> English <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">English</a></li>
+                      <li><a href="#">Russian</a></li>
+                      <li><a href="#">Franch</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown header__item">
+                    <a href="#" class="dropdown-toggle header__link" data-toggle="dropdown">
                     Currecy: USD <span class="caret"></span>
                   </a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Currecy: EUR </a></li>
-                    <li><a href="#">Currecy: RUB</a></li>
-                    <li><a href="#">Currecy: UAH</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <ul class="nav navbar-nav navbar-right header__list">
-                <li class="header__item">
-                  <a href="#" class="header__link">Login</a>
-                </li>
-                <li class="header__item">
-                  <a href="#" class="header__link">SignUp</a>
-                </li>
-                <li class="header__item">
-                  <a href="#" class="nav-btn header__link header__btn">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>Shopping Cart
-                  </a>
-                </li>
-              </ul>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Currecy: EUR </a></li>
+                      <li><a href="#">Currecy: RUB</a></li>
+                      <li><a href="#">Currecy: UAH</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right header__list">
+                  <li class="header__item">
+                    <a href="#" class="header__link">Login</a>
+                  </li>
+                  <li class="header__item">
+                    <a href="#" class="header__link">SignUp</a>
+                  </li>
+                  <li class="header__item">
+                    <a href="#" class="nav-btn header__link header__btn">
+                      <i class="fa fa-shopping-cart" aria-hidden="true"></i>Shopping Cart
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </nav>
-      </div>
-      <div class="header__bottom">
-        <div class="carousel fade" id="carousel" data-ride="carousel">
-          <!-- main navigation -->
-          <div class="main-navigation">
-            <nav class="navbar navbar-inverse">
-              <div class="container">
-                <div class="main-navigation-wrap">
-                  <div class="navbar-header">
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#main-navigation" aria-expanded="false">
+          </nav>
+        </div>
+        <div class="header__bottom">
+          <div class="carousel fade" id="carousel" data-ride="carousel">
+            <!-- main navigation -->
+            <div class="main-navigation">
+              <nav class="navbar navbar-inverse">
+                <div class="container">
+                  <div class="main-navigation-wrap">
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="#">
-                    <img src="img/decor/logo@1x.png" alt="Styletour logo one">
-                    <span class="navbar-brand-logo">Styletour</span>
-                  </a>
+                      <a class="navbar-brand" href="#">
+                        <picture>
+                          <img src="img/decor/logo@1x.png"
+                            srcset="img/decor/logo@2x.png 2x" alt="Styletour logo one">
+                        </picture>
+                        <span class="navbar-brand-logo">Styletour</span>
+                      </a>
 
-                </div>
-                  <div class="collapse navbar-collapse" id="main-navigation">
-                    <ul class="nav navbar-nav main-navigation-list">
-                      <li class="main-navigation-item"><a href="#" class="main-navigation-link">Shop</a></li>
-                      <li class="main-navigation-item"><a href="#" class="main-navigation-link">Men</a></li>
-                      <li class="main-navigation-item"><a href="#" class="main-navigation-link">Women</a></li>
-                      <li class="main-navigation-item"><a href="#" class="main-navigation-link">Kids</a></li>
-                      <li class="main-navigation-item"><a href="#" class="main-navigation-link">Accessories</a></li>
-                      <li class="main-navigation-item"><a href="#" class="main-navigation-link">Contacts</a></li>
-                    </ul>
+                    </div>
+                    <div class="collapse navbar-collapse" id="main-navigation">
+                      <ul class="nav navbar-nav main-navigation-list">
+                        <li class="main-navigation-item"><a href="#" class="main-navigation-link">Shop</a></li>
+                        <li class="main-navigation-item"><a href="#" class="main-navigation-link">Men</a></li>
+                        <li class="main-navigation-item"><a href="#" class="main-navigation-link">Women</a></li>
+                        <li class="main-navigation-item"><a href="#" class="main-navigation-link">Kids</a></li>
+                        <li class="main-navigation-item"><a href="#" class="main-navigation-link">Accessories</a></li>
+                        <li class="main-navigation-item"><a href="#" class="main-navigation-link">Contacts</a></li>
+                      </ul>
 
-                    <div class="nav navbar-nav navbar-right">
-                      <div class="search">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                      </div>
-                      <form class="navbar-form navbar-left" method="get">
-                        <div class="input-group">
-                          <input type="text" class="form-control" placeholder="Search">
-                          <span class="input-group-btn">
+                      <div class="nav navbar-nav navbar-right">
+                        <div class="search">
+                          <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                        <form class="navbar-form navbar-left" method="get">
+                          <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-btn">
                             <button type="submit" class="btn btn-default" name="go">
                               <i class="fa fa-search" aria-hidden="true"></i>
                             </button>
                           </span>
-                        </div>
-                      </form>
+                          </div>
+                        </form>
+                      </div>
                     </div>
-                  </div>
 
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <!-- end main navigation -->
+            <!-- carousel__dots -->
+            <div class="carousel__dots-wrap">
+              <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="carousel-indicators-item active"></li>
+                <li data-target="#carousel" data-slide-to="1" class="carousel-indicators-item"></li>
+              </ol>
+            </div>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <div class="carousel-slide carousel-slide--one"></div>
+                <div class="container">
+                  <div class="carousel-caption">
+                    <h1 class="carousel-title">Women's Apparel</h1>
+                    <div class="carousel-caption-text">T-Shirts, Dress Shirts, Tanks, Pants and More...</div>
+                    <a href="#" class="btn carousel-btn">Shop Women’s Apparel</a>
+                  </div>
                 </div>
               </div>
-            </nav>
-          </div> <!-- end main navigation -->
-          <!-- carousel__dots -->
-          <div class="carousel__dots-wrap">
-            <ol class="carousel-indicators">
-              <li data-target="#carousel" data-slide-to="0" class="carousel-indicators-item active"></li>
-              <li data-target="#carousel" data-slide-to="1" class="carousel-indicators-item"></li>
-            </ol>
-          </div>
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox">
-            <div class="item active">
-              <div class="carousel-slide carousel-slide--one"></div>
-              <div class="container">
-              <div class="carousel-caption">
-                <h1 class="carousel-title">Women's Apparel</h1>
-                <div class="carousel-caption-text">T-Shirts, Dress Shirts, Tanks, Pants and More...</div>
-                <a href="#" class="btn carousel-btn">Shop Women’s Apparel</a>
+              <div class="item">
+                <div class="carousel-slide carousel-slide--two"></div>
+                <div class="container">
+                  <div class="carousel-caption">
+                    <h1 class="carousel-title">Man's Apparel</h1>
+                    <div class="carousel-caption-text">T-Shirts, Dress Shirts, Tanks, Pants and More...</div>
+                    <a href="#" class="btn carousel-btn">Shop Man’s Apparel</a>
+                  </div>
+                </div>
               </div>
             </div>
-            </div>
-            <div class="item">
-              <div class="carousel-slide carousel-slide--two"></div>
-              <div class="container">
-              <div class="carousel-caption">
-                <h1 class="carousel-title">Man's Apparel</h1>
-                <div class="carousel-caption-text">T-Shirts, Dress Shirts, Tanks, Pants and More...</div>
-                <a href="#" class="btn carousel-btn">Shop Man’s Apparel</a>
-              </div>
-            </div>
-            </div>
-          </div>
-          <!-- arrows -->
-          <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev">
+            <!-- arrows -->
+            <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev">
               <i class="fa fa-arrow-left" aria-hidden="true"></i>
             </span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
-            <span class="carousel-control-next" aria-hidden="true">
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+              <span class="carousel-control-next" aria-hidden="true">
               <i class="fa fa-arrow-right" aria-hidden="true"></i>
             </span>
-            <span class="sr-only">Next</span>
-          </a>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
         </div>
-      </div>
-    </header>
-    <!-- END HEADER -->
+      </header>
+      <!-- END HEADER -->
 
-    <!-- PAGE PROMO -->
-    <section class="page-promo">
-      <div class="container">
-        <h1 class="page-promo-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d</h1>
-      </div>
-    </section>
+      <!-- PAGE PROMO -->
+      <section class="page-promo">
+        <div class="container">
+          <h1 class="page-promo-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d</h1>
+        </div>
+      </section>
 
-    <!-- PAGE CONTENT -->
-    <section class="page-wrap">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-9 col-md-push-3">
-            <main class="content">
+      <!-- PAGE CONTENT -->
+      <section class="page-wrap">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-md-push-3">
+              <main class="content">
                 <div class="products">
                   <div class="products__row">
                     <div class="row">
@@ -236,12 +243,14 @@
                             </div>
                             <div class="products__img">
                               <a href="#" class="products__link">
-                                <img src="img/content/item1@1x.png" alt="CREAM JANE JEANS DRESS">
+                                <picture>
+                                  <img src="img/content/item1@1x.png" srcset="img/content/item1@2x.png 2x" alt="CREAM JANE JEANS DRESS">
+                                </picture>
                               </a>
                             </div>
                             <h3 class="products__title"><a href="#" class="products__title-link">CREAM JANE JEANS DRESS</a></h3>
                             <div class="products__desc">Signature NYX cosmetics</div>
-                              <div class="products__buy">
+                            <div class="products__buy">
                               <div class="products__price">Price: €<span>10.00</span></div>
                               <a href="#" class="btn products__btn">Add to cart</a>
                             </div>
@@ -253,15 +262,17 @@
                               <div class="produsts__sale produsts__sale--left"><span>sale</span></div>
                               <div class="products__img">
                                 <a href="#" class="products__link">
-                                  <img src="img/content/item2@1x.png" alt="CREAM SISSI TUNIC">
+                                  <picture>
+                                    <img src="img/content/item2@1x.png" srcset="img/content/item2@2x.png 2x" alt="CREAM SISSI TUNIC">
+                                  </picture>
                                 </a>
                               </div>
                               <h3 class="products__title"><a href="#" class="products__title-link">CREAM SISSI TUNIC</a></h3>
                               <div class="products__desc">Lightweight with just a hint of sheer color, this</div>
                               <div class="products__buy">
                                 <div class="products__price">Price: €<span>20.00</span></div>
-                                  <a href="#" class="btn products__btn">Add to cart</a>
-                                </div>
+                                <a href="#" class="btn products__btn">Add to cart</a>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -269,21 +280,24 @@
                           <div class="products__item">
                             <div class="products__img">
                               <a href="#" class="products__link">
-                                <img src="img/content/item3@1x.png" alt="Big doodle shawl">
+                                <picture>
+                                  <img src="img/content/item3@1x.png" srcset="img/content/item3@2x.png 2x" alt="Big doodle shawl">
+                                </picture>
                               </a>
                             </div>
                             <h3 class="products__title"><a href="#" class="products__title-link">Big doodle shawl - blue/black</a></h3>
-                            <div class="products__desc">Lightweight with just a hint of sheer color, this hydrating
-                              Lorem ipsum dolor sit amet m ipsum dolor.</div>
+                            <div class="products__desc">Lightweight with just a hint of sheer color, this hydrating Lorem ipsum dolor sit amet m ipsum dolor.</div>
                             <div class="products__buy">
                               <div class="products__price">Price: €<span>09.00</span></div>
                               <a href="#" class="btn products__btn">Add to cart</a>
                             </div>
                           </div>
                         </div>
-                      </div> <!-- products__list -->
+                      </div>
+                      <!-- products__list -->
                     </div>
-                  </div> <!-- products__row -->
+                  </div>
+                  <!-- products__row -->
                   <div class="products__row">
                     <div class="row">
                       <div class="col-xs-6">
@@ -306,7 +320,9 @@
                             <div class="produsts__sale produsts__sale--left"><span>sale</span></div>
                             <div class="products__img">
                               <a href="#" class="products__link">
-                                <img src="img/content/item4@1x.png" alt="CREAM SISSI TUNIC">
+                                <picture>
+                                  <img src="img/content/item4@1x.png" srcset="img/content/item4@2x.png 2x" alt="CREAM SISSI TUNIC">
+                                </picture>
                               </a>
                             </div>
                             <h3 class="products__title"><a href="#" class="products__title-link">CREAM SISSI TUNIC</a></h3>
@@ -321,7 +337,9 @@
                           <div class="products__item">
                             <div class="products__img">
                               <a href="#" class="products__link">
-                                <img src="img/content/item5@1x.png" alt="Big doodle shawl - blue/black copy">
+                                <picture>
+                                  <img src="img/content/item5@1x.png" srcset="img/content/item5@2x.png 2x" alt="Big doodle shawl - blue/black copy">
+                                </picture>
                               </a>
                             </div>
                             <h3 class="products__title"><a href="#" class="products__title-link">Big doodle shawl - blue/black</a></h3>
@@ -336,27 +354,32 @@
                           <div class="products__item">
                             <div class="products__img">
                               <a href="#" class="products__link">
-                                <img src="img/content/item6@1x.png" alt="Big doodle shawl">
+                                <picture>
+                                  <img src="img/content/item6@1x.png" srcset="img/content/item6@2x.png 2x" alt="Big doodle shawl">
+                                </picture>
                               </a>
                             </div>
                             <h3 class="products__title"><a href="#" class="products__title-link">Big doodle shawl - blue/black</a></h3>
-                            <div class="products__desc">Lightweight with just a hint of sheer color, this hydrating
-                              Lorem ipsum dolor sit amet m ipsum dolor.</div>
+                            <div class="products__desc">Lightweight with just a hint of sheer color, this hydrating Lorem ipsum dolor sit amet m ipsum dolor.</div>
                             <div class="products__buy">
                               <div class="products__price">Price: €<span>09.00</span></div>
                               <a href="#" class="btn products__btn">Add to cart</a>
                             </div>
                           </div>
                         </div>
-                      </div> <!-- products__list -->
+                      </div>
+                      <!-- products__list -->
                     </div>
-                  </div> <!-- products__row -->
+                  </div>
+                  <!-- products__row -->
                   <div class="products__row">
                     <div class="banner">
                       <div class="row">
                         <div class="col-sm-4">
                           <a href="#" class="banner__item">
-                              <img src="img/content/item7@1x.jpg" alt="banner1">
+                            <picture>
+                              <img src="img/content/item7@1x.jpg" srcset="img/content/item7@2x.jpg 2x" alt="banner1">
+                            </picture>
                             <div class="banner__block">
                               <h2 class="banner__title">Sale upto 35%</h2>
                               <div class="banner__text">Summer collection 2013</div>
@@ -365,9 +388,9 @@
                         </div>
                         <div class="col-sm-4">
                           <a href="#" class="banner__item">
-                            <figure>
-                              <img src="img/content/item8@1x.jpg" alt="banner2">
-                            </figure>
+                            <picture>
+                              <img src="img/content/item8@1x.jpg" srcset="img/content/item8@2x.jpg 2x" alt="banner2">
+                            </picture>
                             <div class="banner__block banner__block--big">
                               <h2 class="banner__title">New Arrivals</h2>
                               <div class="banner__text">Lace bikinis and bras</div>
@@ -386,7 +409,8 @@
                         </div>
                       </div>
                     </div>
-                  </div> <!-- products__row -->
+                  </div>
+                  <!-- products__row -->
                   <div class="products__row">
                     <div class="row">
                       <div class="col-xs-6">
@@ -408,7 +432,9 @@
                           <div class="products__item">
                             <div class="products__img">
                               <a href="#" class="products__link">
-                                <img src="img/content/item10@1x.png" alt="CREAM SISSI TUNIC">
+                                <picture>
+                                  <img src="img/content/item10@1x.png" srcset="img/content/item10@2x.png 2x" alt="CREAM SISSI TUNIC">
+                                </picture>
                               </a>
                             </div>
                             <h3 class="products__title"><a href="#" class="products__title-link">CREAM SISSI TUNIC</a></h3>
@@ -424,7 +450,9 @@
                             <div class="produsts__sale produsts__sale--left"><span>sale</span></div>
                             <div class="products__img">
                               <a href="#" class="products__link">
-                                <img src="img/content/item11@1x.png" alt="Big doodle shawl - blue/black copy">
+                                <picture>
+                                  <img src="img/content/item11@1x.png" srcset="img/content/item11@2x.png 2x" alt="Big doodle shawl - blue/black copy">
+                                </picture>
                               </a>
                             </div>
                             <h3 class="products__title"><a href="#" class="products__title-link">Big doodle shawl - blue/black</a></h3>
@@ -439,233 +467,239 @@
                           <div class="products__item">
                             <div class="products__img">
                               <a href="#" class="products__link">
-                                <img src="img/content/item12@1x.png" alt="Big doodle shawl">
+                                <picture>
+                                  <img src="img/content/item12@1x.png" srcset="img/content/item12@2x.png 2x" alt="Big doodle shawl">
+                                </picture>
                               </a>
                             </div>
                             <h3 class="products__title"><a href="#" class="products__title-link">Big doodle shawl - blue/black</a></h3>
-                            <div class="products__desc">Lightweight with just a hint of sheer color, this hydrating
-                              Lorem ipsum dolor sit amet m ipsum dolor.</div>
+                            <div class="products__desc">Lightweight with just a hint of sheer color, this hydrating Lorem ipsum dolor sit amet m ipsum dolor.</div>
                             <div class="products__buy">
                               <div class="products__price">Price: €<span>35.00</span></div>
                               <a href="#" class="btn products__btn">Add to cart</a>
                             </div>
                           </div>
                         </div>
-                      </div> <!-- products__list -->
+                      </div>
+                      <!-- products__list -->
                     </div>
-                  </div> <!-- products__row -->
-                </div>
-            </main>
-          </div>
-          <div class="col-md-3 col-md-pull-9">
-            <section class="sidebar">
-              <div class="sidebar__list">
-                <div class="row">
-                  <div class="col-xs-6 col-md-12">
-                    <div class="sidebar-widget">
-                      <h2 class="sidebar-widget__title">Popular Categories</h2>
-                      <ul class="sidebar-widget__list">
-                        <li class="sidebar-widget__item">
-                          <a href="#" class="sidebar-widget__link">Performance Collection </a>
-                        </li>
-                        <li class="sidebar-widget__item">
-                          <a href="#" class="sidebar-widget__link">Pants</a>
-                        </li>
-                        <li class="sidebar-widget__item">
-                          <a href="#" class="sidebar-widget__link"> Woven Shirts</a>
-                        </li>
-                        <li class="sidebar-widget__item">
-                          <a href="#" class="sidebar-widget__link">Earth-Friendly Appare</a>
-                        </li>
-                        <li class="sidebar-widget__item">
-                          <a href="#" class="sidebar-widget__link">Sweatshits</a>
-                        </li>
-                        <li class="sidebar-widget__item">
-                          <a href="#" class="sidebar-widget__link">Infants</a>
-                        </li>
-                        <li class="sidebar-widget__item">
-                          <a href="#" class="sidebar-widget__link">Shorts</a>
-                        </li>
-                        <li class="sidebar-widget__item">
-                          <a href="#" class="sidebar-widget__link">Adult Essentials</a>
-                        </li>
-                        <li class="sidebar-widget__item">
-                          <a href="#" class="sidebar-widget__link sidebar-widget__link--showMore">Show More</a>
-                        </li>
-                      </ul>   <!-- sidebar__categories-list -->
-                    </div>  <!-- sidebar__categories -->
                   </div>
-                  <div class="col-xs-6 col-md-12">
-                    <div class="sidebar-widget">
-                      <h2 class="sidebar-widget__title">Popular Brands</h2>
-                      <ul class="sidebar-widget__list">
-                        <li class="sidebar-widget__item">
-                          <a href="#" class="sidebar-widget__link">Ashworth</a>
-                        </li>
-                        <li class="sidebar-widget__item">
-                          <a href="#" class="sidebar-widget__link">Rabbit Skins</a>
-                        </li>
-                        <li class="sidebar-widget__item">
-                          <a href="#" class="sidebar-widget__link">Izod</a>
-                        </li>
-                        <li class="sidebar-widget__item">
-                          <a href="#" class="sidebar-widget__link">LAT</a>
-                        </li>
-                        <li class="sidebar-widget__item">
-                          <a href="#" class="sidebar-widget__link">Authentic Pigment</a>
-                        </li>
-                        <li class="sidebar-widget__item">
-                          <a href="#" class="sidebar-widget__link">Canvas</a>
-                        </li>
-                        <li class="sidebar-widget__item">
-                          <a href="#" class="sidebar-widget__link">Apples&amp;Oranges</a>
-                        </li>
-                        <li class="sidebar-widget__item">
-                          <a href="#" class="sidebar-widget__link sidebar-widget__link--showMore">Show More</a>
-                        </li>
-                      </ul>   <!-- sidebar__brands-list -->
-                    </div> <!-- sidebar__brands -->
-                  </div>
+                  <!-- products__row -->
                 </div>
-                <div class="row">
-                  <div class="col-xs-6 col-md-12">
-                    <div class="sidebar-widget sidebar-widget--noborder">
-                      <div class="carousel fade" id="carousel-wid" data-ride="carousel">
-                        <div class="carousel-inner" role="listbox">
-                          <div class="item active">
-                            <div class="carousel-slide">
-                              <img src="img/bg/bg-widget@1x.jpg" alt="image1">
+              </main>
+            </div>
+            <div class="col-md-3 col-md-pull-9">
+              <section class="sidebar">
+                <div class="sidebar__list">
+                  <div class="row">
+                    <div class="col-xs-6 col-md-12">
+                      <div class="sidebar-widget">
+                        <h2 class="sidebar-widget__title">Popular Categories</h2>
+                        <ul class="sidebar-widget__list">
+                          <li class="sidebar-widget__item">
+                            <a href="#" class="sidebar-widget__link">Performance Collection </a>
+                          </li>
+                          <li class="sidebar-widget__item">
+                            <a href="#" class="sidebar-widget__link">Pants</a>
+                          </li>
+                          <li class="sidebar-widget__item">
+                            <a href="#" class="sidebar-widget__link"> Woven Shirts</a>
+                          </li>
+                          <li class="sidebar-widget__item">
+                            <a href="#" class="sidebar-widget__link">Earth-Friendly Appare</a>
+                          </li>
+                          <li class="sidebar-widget__item">
+                            <a href="#" class="sidebar-widget__link">Sweatshits</a>
+                          </li>
+                          <li class="sidebar-widget__item">
+                            <a href="#" class="sidebar-widget__link">Infants</a>
+                          </li>
+                          <li class="sidebar-widget__item">
+                            <a href="#" class="sidebar-widget__link">Shorts</a>
+                          </li>
+                          <li class="sidebar-widget__item">
+                            <a href="#" class="sidebar-widget__link">Adult Essentials</a>
+                          </li>
+                          <li class="sidebar-widget__item">
+                            <a href="#" class="sidebar-widget__link sidebar-widget__link--showMore">Show More</a>
+                          </li>
+                        </ul>
+                        <!-- sidebar__categories-list -->
+                      </div>
+                      <!-- sidebar__categories -->
+                    </div>
+                    <div class="col-xs-6 col-md-12">
+                      <div class="sidebar-widget">
+                        <h2 class="sidebar-widget__title">Popular Brands</h2>
+                        <ul class="sidebar-widget__list">
+                          <li class="sidebar-widget__item">
+                            <a href="#" class="sidebar-widget__link">Ashworth</a>
+                          </li>
+                          <li class="sidebar-widget__item">
+                            <a href="#" class="sidebar-widget__link">Rabbit Skins</a>
+                          </li>
+                          <li class="sidebar-widget__item">
+                            <a href="#" class="sidebar-widget__link">Izod</a>
+                          </li>
+                          <li class="sidebar-widget__item">
+                            <a href="#" class="sidebar-widget__link">LAT</a>
+                          </li>
+                          <li class="sidebar-widget__item">
+                            <a href="#" class="sidebar-widget__link">Authentic Pigment</a>
+                          </li>
+                          <li class="sidebar-widget__item">
+                            <a href="#" class="sidebar-widget__link">Canvas</a>
+                          </li>
+                          <li class="sidebar-widget__item">
+                            <a href="#" class="sidebar-widget__link">Apples&amp;Oranges</a>
+                          </li>
+                          <li class="sidebar-widget__item">
+                            <a href="#" class="sidebar-widget__link sidebar-widget__link--showMore">Show More</a>
+                          </li>
+                        </ul>
+                        <!-- sidebar__brands-list -->
+                      </div>
+                      <!-- sidebar__brands -->
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-6 col-md-12">
+                      <div class="sidebar-widget sidebar-widget--noborder">
+                        <div class="carousel fade" id="carousel-wid" data-ride="carousel">
+                          <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                              <div class="carousel-slide">
+                                <picture>
+                                  <img src="img/bg/bg-widget@1x.jpg" srcset="img/bg/bg-widget@2x.jpg 2x" alt="image1">
+                                </picture>
+                              </div>
+                              <div class="carousel-wid-caption">
+                                <h3 class="carousel-wid-title">Fashion Colors For Women</h3>
+                                <p class="carousel-wid-caption-text">Make every category of your webstore look special by setting di</p>
+                              </div>
                             </div>
-                            <div class="carousel-wid-caption">
-                              <h3 class="carousel-wid-title">Fashion Colors For Women</h3>
-                              <p class="carousel-wid-caption-text">Make every category of your webstore
-                                look special by setting di</p>
+                            <div class="item">
+                              <div class="carousel-slide">
+                                <picture>
+                                  <img src="img/bg/bg-widget@1x.jpg" srcset="img/bg/bg-widget@2x.jpg 2x" alt="image1">
+                                </picture>
+                              </div>
+                              <div class="carousel-wid-caption">
+                                <h3 class="carousel-wid-title">Fashion Colors For Man</h3>
+                                <p class="carousel-wid-caption-text">Make every category of your webstore look special by setting di</p>
+                              </div>
                             </div>
                           </div>
-                          <div class="item">
-                            <div class="carousel-slide">
-                              <img src="img/bg/bg-widget@1x.jpg" alt="image2">
-                            </div>
-                            <div class="carousel-wid-caption">
-                              <h3 class="carousel-wid-title">Fashion Colors For Man</h3>
-                              <p class="carousel-wid-caption-text">Make every category of your webstore
-                                look special by setting di</p>
-                            </div>
-                          </div>
+                          <ol class="carousel-indicators">
+                            <li data-target="#carousel-wid" data-slide-to="0" class="carousel-wid-indicators-item active"></li>
+                            <li data-target="#carousel-wid" data-slide-to="1" class="carousel-wid-indicators-item"></li>
+                          </ol>
                         </div>
-                        <ol class="carousel-indicators">
-                          <li data-target="#carousel-wid" data-slide-to="0" class="carousel-wid-indicators-item active"></li>
-                          <li data-target="#carousel-wid" data-slide-to="1" class="carousel-wid-indicators-item"></li>
-                        </ol>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-md-12">
+                      <div class="sidebar-widget sidebar-widget--noborder sidebar-banner">
+                        <div class="sidebar-banner__img">
+                          <picture>
+                            <img src="img/bg/bg-widget2@1x.jpg" srcset="img/bg/bg-widget2@2x.jpg 2x" alt="banner">
+                          </picture>
+                        </div>
+                        <div class="sidebar-banner__block">
+                          <div class="sidebar-banner__text">Introducing</div>
+                          <h3 class="sidebar-banner__title">Bombshell</h3>
+                          <div class="sidebar-banner__text">Forever</div>
+                          <a href="#" class="btn sidebar-banner__btn">Shop now</a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="col-xs-6 col-md-12">
-                    <div class="sidebar-widget sidebar-widget--noborder sidebar-banner">
-                      <div class="sidebar-banner__img">
-                        <img src="img/bg/bg-widget2@1x.jpg" alt="banner">
-                      </div>
-                      <div class="sidebar-banner__block">
-                        <div class="sidebar-banner__text">Introducing</div>
-                        <h3 class="sidebar-banner__title">Bombshell</h3>
-                        <div class="sidebar-banner__text">Forever</div>
-                        <a href="#" class="btn sidebar-banner__btn">Shop now</a>
-                      </div>
-                    </div>
+                  <div class="sidebar-widget sidebar-widget--noborder">
+                    <h3 class="sidebar-widget__title">About Store</h3>
+                    <p class="sidebar-widget__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque vel, maxime, veniam harum quaerat labore ullam asperiores, minus est quam architecto recusandae at doloremque possimus nesciunt ex nostrum sit repellat.</p>
+                    <p class="sidebar-widget__text sidebar-widget__text--blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum inventore, minus laboriosam aliquam voluptas. Rem praesentium non expedita ut nesciunt.</p>
                   </div>
                 </div>
-                <div class="sidebar-widget sidebar-widget--noborder">
-                  <h3 class="sidebar-widget__title">About Store</h3>
-                  <p class="sidebar-widget__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque vel,
-                    maxime, veniam harum quaerat labore ullam asperiores, minus est quam
-                    architecto recusandae at doloremque possimus nesciunt ex nostrum sit repellat.</p>
-                  <p class="sidebar-widget__text sidebar-widget__text--blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Voluptatum inventore, minus laboriosam aliquam voluptas. Rem praesentium
-                    non expedita ut nesciunt.</p>
-                </div>
-              </div> <!-- sidebar__list -->
-            </section>
+                <!-- sidebar__list -->
+              </section>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- END PAGE CONTENT -->
+      </section>
+      <!-- END PAGE CONTENT -->
 
-    <section class="discounts">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <h2 class="discounts__title">Get Discounts and Free Offers</h2>
-            <div class="discounts__text">Get free coupens, discounts and new arivals</div>
-          </div>
-          <div class="col-md-8">
-            <form class="form-inline discounts__form">
-              <div class="row">
-                <div class="col-sm-4 form-group discounts__form-block">
-                  <label class="sr-only" for="name-field">Name</label>
-                  <input type="text" class="form-control" id="name-field" placeholder="You full name">
+      <section class="discounts">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h2 class="discounts__title">Get Discounts and Free Offers</h2>
+              <div class="discounts__text">Get free coupens, discounts and new arivals</div>
+            </div>
+            <div class="col-md-8">
+              <form class="form-inline discounts__form">
+                <div class="row">
+                  <div class="col-sm-4 form-group discounts__form-block">
+                    <label class="sr-only" for="name-field">Name</label>
+                    <input type="text" class="form-control" id="name-field" placeholder="You full name">
+                  </div>
+                  <div class="col-sm-4 form-group discounts__form-block">
+                    <label class="sr-only" for="email-field">Email address</label>
+                    <input type="email" class="form-control" id="email-field" placeholder="You email address">
+                  </div>
+                  <div class="col-sm-4">
+                    <button type="submit" class="btn discounts__form-btn">Subcribe</button>
+                  </div>
                 </div>
-                <div class="col-sm-4 form-group discounts__form-block">
-                  <label class="sr-only" for="email-field">Email address</label>
-                  <input type="email" class="form-control" id="email-field" placeholder="You email address">
-                </div>
-                <div class="col-sm-4">
-                  <button type="submit" class="btn discounts__form-btn">Subcribe</button>
-                </div>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="brands">
-      <div class="row">
+      <section class="brands">
         <div class="container">
           <div class="brands__block">
             <ul class="brands__list owl-carousel" id="brands-slider">
               <li class="brands__item">
-                  <a href="#" class="brands__link">
-                    <picture>
-                      <img src="img/content/brend1@1x.png"
-                        srcset="img/content/brend1@2x.png 2x" alt="brend1">
-                    </picture>
-                  </a>
+                <a href="#" class="brands__link">
+                  <picture>
+                    <img src="img/content/brend1@1x.png" srcset="img/content/brend1@2x.png 2x" alt="brend1">
+                  </picture>
+                </a>
               </li>
               <li class="brands__item">
-                  <a href="#" class="brands__link">
-                    <picture>
-                      <img src="img/content/brend2@1x.png" srcset="img/content/brend2@2x.png 2x" alt="brend2">
-                    </picture>
-                  </a>
+                <a href="#" class="brands__link">
+                  <picture>
+                    <img src="img/content/brend2@1x.png" srcset="img/content/brend2@2x.png 2x" alt="brend2">
+                  </picture>
+                </a>
               </li>
               <li class="brands__item">
-                  <a href="#" class="brands__link">
-                    <picture>
-                      <img src="img/content/brend3@1x.png" srcset="img/content/brend3@2x.png 2x" alt="brend3">
-                    </picture>
-                  </a>
+                <a href="#" class="brands__link">
+                  <picture>
+                    <img src="img/content/brend3@1x.png" srcset="img/content/brend3@2x.png 2x" alt="brend3">
+                  </picture>
+                </a>
               </li>
               <li class="brands__item">
-                  <a href="#" class="brands__link">
-                    <picture>
-                      <img src="img/content/brend4@1x.png" srcset="img/content/brend4@2x.png 2x" alt="brend4">
-                    </picture>
-                  </a>
+                <a href="#" class="brands__link">
+                  <picture>
+                    <img src="img/content/brend4@1x.png" srcset="img/content/brend4@2x.png 2x" alt="brend4">
+                  </picture>
+                </a>
               </li>
               <li class="brands__item">
-                  <a href="#" class="brands__link">
-                    <picture>
-                      <img src="img/content/brend3@1x.png" srcset="img/content/brend3@2x.png 2x" alt="brend3">
-                    </picture>
-                  </a>
+                <a href="#" class="brands__link">
+                  <picture>
+                    <img src="img/content/brend3@1x.png" srcset="img/content/brend3@2x.png 2x" alt="brend3">
+                  </picture>
+                </a>
               </li>
               <li class="brands__item">
-                  <a href="#" class="brands__link">
-                    <picture>
-                      <img src="img/content/brend2@1x.png" srcset="img/content/brend2@2x.png 2x" alt="brend2">
-                    </picture>
-                  </a>
+                <a href="#" class="brands__link">
+                  <picture>
+                    <img src="img/content/brend2@1x.png" srcset="img/content/brend2@2x.png 2x" alt="brend2">
+                  </picture>
+                </a>
               </li>
             </ul>
             <div class="brands__arrows">
@@ -674,69 +708,223 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-
-      <section class="footer__socials">
-        <div class="container">
-          <div class="logo footer__socials-logo">
-            <a href="#" class="logo__link footer__socials-logo-link">
-
-            </a>
-          </div>
-          <div class="footer__socials-wrap">
-            <ul class="socials">
-              <!-- <li class="socials__item ">
-                <a href="#" class="socials__link" target="_blank" rel="noopener noreferrer">facebook
-                  <svg width="18" height="18">
-                    <use xlink:href="#icon-facebook"></use>
-                  </svg>
-                </a>
-              </li> -->
-            </ul>
-          </div>
-        </div>
       </section>
 
-      <section class="footer__copyright">Copyright &copy; 2014 Unique, All Right Reserved</section>
-    </footer>
-    <!-- END FOOTER -->
+      <!-- FOOTER -->
+      <footer class="footer">
+        <section class="footer__top">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-10">
+                <div class="footer__menu">
+                  <div class="row">
+                    <div class="col-xs-6 col-md-3">
+                      <h4 class="footer__menu-title">Help &amp; Info</h4>
+                      <ul class="footer__menu-list">
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">Delivery</a>
+                        </li>
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">Delivery Returns</a>
+                        </li>
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">Contact Us</a>
+                        </li>
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">Track your Order</a>
+                        </li>
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">Reglaze Service</a>
+                        </li>
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">A - Z Brands</a>
+                        </li>
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">FAQ's</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                      <h4 class="footer__menu-title">Brands we sell</h4>
+                      <ul class="footer__menu-list">
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">Noosa Amsterdam </a>
+                        </li>
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">Cream Clothing</a>
+                        </li>
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">Taschendieb</a>
+                        </li>
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">Hermes paris</a>
+                        </li>
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">D&amp;G Fashion</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="clearfix visible-xs-block visible-sm-block"></div>
+                    <div class="col-xs-6 col-md-3">
+                      <h4 class="footer__menu-title">Care &amp; Advice</h4>
+                      <ul class="footer__menu-list">
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">Delivery</a>
+                        </li>
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">Prescription Information</a>
+                        </li>
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">Lenses &amp; Coatings</a>
+                        </li>
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">PD Measurement</a>
+                        </li>
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">Style Advice</a>
+                        </li>
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">Size Guide</a>
+                        </li>
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">Shopping Guide</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                      <h4 class="footer__menu-title">Company</h4>
+                      <ul class="footer__menu-list">
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">About Us</a>
+                        </li>
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">Our Store</a>
+                        </li>
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">Terms &amp; Conditions</a>
+                        </li>
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">Privacy Policy</a>
+                        </li>
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">Cookies</a>
+                        </li>
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">Find us</a>
+                        </li>
+                        <li class="footer__menu-item">
+                          <a href="#" class="footer__menu-link">FAQ's</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <h4 class="footer__menu-title">Follow us</h4>
+                <ul class="socials">
+                  <li class="socials__item">
+                    <a href="#" class="socials__link socials__link--fb">facebook
+                      <svg width="23" height="23">
+                        <use xlink:href="#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials__item">
+                    <a href="#" class="socials__link socials__link--tw">facebook
+                    <svg width="23" height="23">
+                      <use xlink:href="#icon-twitter"></use>
+                    </svg>
+                  </a>
+                  </li>
+                  <li class="socials__item">
+                    <a href="#" class="socials__link socials__link--flickr">flickr
+                    <svg width="23" height="23">
+                      <use xlink:href="#icon-flickr"></use>
+                    </svg>
+                  </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="footer__bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="footer__copyright">Copyright &copy; 2014 Unique, All Right Reserved</div>
+              </div>
+              <div class="col-sm-8">
+                <ul class="footer__paymants">
+                  <li class="footer__paymants-item">
+                    <a href="#" class="footer__paymants-link">
+                      <picture>
+                        <img src="img/decor/pay1@1x.png" srcset="img/content/pay1@2x.png 2x" alt="pay1">
+                      </picture>
+                    </a>
+                  </li>
+                  <li class="footer__paymants-item">
+                    <a href="#" class="footer__paymants-link">
+                      <picture>
+                        <img src="img/decor/pay2@1x.png" srcset="img/content/pay2@2x.png 2x" alt="pay2">
+                      </picture>
+                    </a>
+                  </li>
+                  <li class="footer__paymants-item">
+                    <a href="#" class="footer__paymants-link">
+                      <picture>
+                        <img src="img/decor/pay3@1x.png" srcset="img/content/pay3@2x.png 2x" alt="pay3">
+                      </picture>
+                    </a>
+                  </li>
+                  <li class="footer__paymants-item">
+                    <a href="#" class="footer__paymants-link">
+                      <picture>
+                        <img src="img/decor/pay4@1x.png" srcset="img/content/pay4@2x.png 2x" alt="pay4">
+                      </picture>
+                    </a>
+                  </li>
+                  <li class="footer__paymants-item">
+                    <a href="#" class="footer__paymants-link">
+                      <picture>
+                        <img src="img/decor/pay5@1x.png" srcset="img/content/pay5@2x.png 2x" alt="pay5">
+                      </picture>
+                    </a>
+                  </li>
+                  <li class="footer__paymants-item">
+                    <a href="#" class="footer__paymants-link">
+                      <picture>
+                        <img src="img/decor/pay6@1x.png" srcset="img/content/pay462x.png 2x" alt="pay6">
+                      </picture>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </footer>
+      <!-- END FOOTER -->
 
-    <div class="status-popup" id="success-popup">
-      <div class="status-popup__inner">
-        <div class="status-popup__title">Message send</div>
-        <a class="btn status-popup__close" href="#">Close</a>
-      </div>
-    </div>
-    <div class="status-popup" id="error-popup">
-  		<div class="status-popup__inner">
-  			<div class="status-popup__title error-message">Error send</div>
-        <a class="btn status-popup__close" href="#">Close</a>
-  		</div>
-  	</div>
-  </div>
-
-  <!-- polyfills -->
-  <!--build:js js/polyfills.min.js -->
-  <script src="./bower/picturefill/dist/picturefill.js"></script>
-  <!-- endbuild -->
+      <!-- polyfills -->
+      <!--build:js js/polyfills.min.js -->
+      <script src="./bower/picturefill/dist/picturefill.js"></script>
+      <!-- endbuild -->
 
 
-  <!-- libs scripts.js -->
-  <!-- build:js js/libs.js -->
-  <script src="bower/jquery/dist/jquery.js"></script>
-  <script src="bower/owl.carousel/dist/owl.carousel.js"></script>
-  <script src="bower/bootstrap/dist/js/bootstrap.js"></script>
-  <!-- endbuild -->
+      <!-- libs scripts.js -->
+      <!-- build:js js/libs.js -->
+      <script src="bower/jquery/dist/jquery.js"></script>
+      <script src="bower/owl.carousel/dist/owl.carousel.js"></script>
+      <script src="bower/bootstrap/dist/js/bootstrap.js"></script>
+      <!-- endbuild -->
 
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
   integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
-  <!-- custom scripts.js -->
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-  <script src="js/common.js"></script>
-</body>
+      <!-- custom scripts.js -->
+      <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+      <script src="js/common.js"></script>
+  </body>
 
 </html>

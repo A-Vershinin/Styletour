@@ -166,6 +166,7 @@ gulp.task('png-sprite', function() {
 		imgPath: "../img/png-sprite.png",
 		padding: 70
   }));
+  spriteData.css.pipe(gulp.dest("app/sass/sprites"));
   spriteData.img.pipe(gulp.dest("build/img"));
 });
 
@@ -188,7 +189,7 @@ gulp.task("extras", function() {
 gulp.task("js-common", function() {
   return gulp.src("app/js/common.js") //берём файл common.js в app/js
   .pipe(gulp.dest("build/js"))
-  .pipe(uglify())  //cжимаем common.js
+  // .pipe(uglify())  //cжимаем common.js
   .pipe(rename("common.min.js")) //переименовываем файл common.js в common.min.js
   .pipe(gulp.dest("build/js"))  //Выгружаем результаты в папку build/css
 });

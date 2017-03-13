@@ -1,7 +1,6 @@
 .brands {
   position: relative;
   background-color: $bg-2;
-  margin-bottom: 100px;
 }
 .brands__block {
   position: relative;
@@ -18,11 +17,9 @@
   display: inline-block;
   vertical-align: middle;
   font-size: 16px;
-  line-height: 58px;
 }
 .brands__link {
   display: block;
-  width: 100%;
   text-decoration: none;
   cursor: pointer;
   transition: all .4s ease;
@@ -38,30 +35,6 @@
   transform: translate(-50%, -50%);
   width: 100%;
 }
-// .brands__arrow-prev {
-//   position: absolute;
-//   left: 0;
-//   width: rem(30px);
-//   height: rem(30px);
-//   text-indent: -9999px;
-//   background-color: $gray-5;
-//   border-radius: 4px;
-//   cursor: pointer;
-//   &:hover {
-//     background-color: $accent;
-//     &::after {
-//       border-right: rem(12px) solid $gray-5;
-//     }
-//   }
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     top: rem(7px);
-//     left: rem(1px);
-//     border: rem(8px) solid transparent;
-//     border-right: rem(12px) solid $blue-2;
-//   }
-// }
 .brands__arrow-prev {
   position: absolute;
   left: 0;
@@ -95,30 +68,6 @@
     }
   }
 }
-// .brands__arrows-next {
-//   position: absolute;
-//   right: 0%;
-//   width: rem(30px);
-//   height: rem(30px);
-//   text-indent: -9999px;
-//   background-color: $gray-5;
-//   border-radius: 4px;
-//   cursor: pointer;
-//   &:hover {
-//     background-color: $accent;
-//     &::after {
-//       border-left: rem(12px) solid $gray-5;
-//     }
-//   }
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     top: rem(7px);
-//     left: rem(11px);
-//     border: rem(8px) solid transparent;
-//     border-left: rem(12px) solid $blue-2;
-//   }
-// }
 .brands__arrows-next {
   position: absolute;
   right: 0;
@@ -156,10 +105,19 @@
 
 }
 @media screen and #{($laptop-point-widths-des)} {
+  .brands__block {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
 }
 @media screen and #{($tablet-point-widths-des)} {
-
-
+  .brands__block {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .brands__arrows {
+    display: none;
+  }
 }
 @media screen and #{($phone-point-widths-des)} {
 
